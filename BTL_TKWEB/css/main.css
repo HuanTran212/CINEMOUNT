@@ -190,3 +190,230 @@ body {
   font-size: 13px;
   color: var(--text-dim);
 }
+
+
+/*------------chonPhim.html-------------*/
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181a1d; /* Màu nền tối (thường thấy ở các trang web xem phim) */
+    color: #e0e0e0; /* Màu chữ sáng */
+    line-height: 1.6;
+}
+
+/* Container giới hạn chiều rộng nội dung */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ================== 1. HEADER ================== */
+#main-header {
+    background-color: #202225;
+    border-bottom: 1px solid #333;
+}
+
+#main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #e50914; /* Màu đỏ nổi bật */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin-right: 20px;
+}
+
+.main-nav a,
+.user-actions button {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #e50914;
+}
+
+.user-actions input[type="text"] {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #333;
+    color: #e0e0e0;
+    margin-right: 10px;
+}
+
+.user-actions button {
+    background-color: #e50914;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ================== 2. MAIN CONTENT ================== */
+/* #movie-main {
+    padding-top: 20px;
+} */
+
+
+.player-placeholder {
+    background-color: #000;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* Khu vực Chi tiết và Sidebar */
+.content-wrapper {
+    display: flex;
+    gap: 30px; /* Khoảng cách giữa các cột */
+    margin-bottom: 40px;
+}
+
+.movie-details {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1; 
+    background-color: #202225;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.movie-details h2, .movie-details h3, .movie-details h4, .sidebar h3 {
+    color: #e50914;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.meta-info span {
+    background-color: #333;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+.tabs-navigation {
+    border-bottom: 2px solid #333;
+    margin: 20px 0;
+}
+
+.tabs-navigation a {
+    text-decoration: none;
+    color: #ccc;
+    padding: 10px 15px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.tabs-navigation a.active {
+    color: #e50914;
+    border-bottom-color: #e50914;
+    font-weight: bold;
+}
+
+.related-list {
+    list-style: none;
+}
+
+.related-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #333;
+}
+
+.related-list li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.comment-section textarea {
+    width: 100%;
+    min-height: 100px;
+    background-color: #333;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+/* ================== 3. FOOTER ================== */
+#main-footer {
+    background-color: #202225;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+}
+
+#main-footer a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+#main-footer a:hover {
+    color: #e0e0e0;
+}
+
+.copyright-note {
+    font-style: italic;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* ================== 4. RESPONSIVE (Dành cho điện thoại) ================== */
+@media (max-width: 768px) {
+    
+    #main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+        margin: 10px 0;
+        flex-wrap: wrap; /* Cho phép các mục xuống dòng */
+    }
+    
+    .main-nav li {
+        margin: 5px 10px;
+    }
+
+    /* Đảo ngược bố cục chi tiết và sidebar thành một cột */
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        order: -1; /* Đẩy sidebar lên trên chi tiết phim trên di động */
+    }
+}
+/*---------------------------------------*/
