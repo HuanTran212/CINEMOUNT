@@ -17,7 +17,7 @@
 body {
   background: var(--bg);
   color: var(--text);
-  /* padding: 0 40px; */
+  padding: 0 40px;
 }
 
 /* HEADER */
