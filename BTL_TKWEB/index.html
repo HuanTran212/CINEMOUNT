@@ -11,11 +11,56 @@
     <!-- Header -->
     <header class="header">
       <div class="logo">
-        <img src="images/logo.png" alt="Movies Bazer" />
-        <span>Movies Bazer</span>
+        <img
+          src="images/logo.png"
+          alt="Movies Bazer"
+          style="
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+          "
+        />
+        <a style="text-decoration: none; color: white" href="index.html"
+          ><span>CINEMOUNT</span></a
+        >
       </div>
 
       <nav class="nav">
+        <a href="#" class="active">Home</a>
+        <a href="#">Explore</a>
+        <a href="#">Genre</a>
+        <a href="#">News</a>
+        <a href="#">Movies</a>
+        <a href="#">TV Shows</a>
+      </nav>
+    </header>
+    <header class="header">
+      <div class="logo">
+        <img
+          src="images/logo.png"
+          alt="Movies Bazer"
+          style="
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+          "
+        />
+        <a style="text-decoration: none; color: white" href="index.html">
+          <span>CINEMOUNT</span>
+        </a>
+      </div>
+
+      <!-- Nút mobile -->
+      <div class="menu-btn" id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- NAV -->
+      <nav class="nav" id="nav">
         <a href="#" class="active">Home</a>
         <a href="#">Explore</a>
         <a href="#">Genre</a>
@@ -126,5 +171,220 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="comment">
+        <h3>💬 Comment</h3>
+
+        <div class="comment-list">
+          <div class="comment-item">
+            <img
+              src="./images/thanhhuy.jpg"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Thanh Huy Ng</h5>
+              <p>Phim hay lắm mọi người ơi</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <img
+              src="./images/ronaldo.jfif"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Cristiano Ronaldo</h5>
+              <p>Một đời liêm khiết chống lại fifa</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <img
+              src="./images/messi.jfif"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Lionel Messi</h5>
+              <p>Tôi được cha fifa chống lưng, Ronaldo is G.O.A.T</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <img
+              src="./images/BinhGold.jfif"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Bình Gold</h5>
+              <p>Đi tù vui lắm, không phải lo cơm nước nợ nần</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <img
+              src="./images/gh.jpg"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Cao Nguyễn Gia Huy</h5>
+              <p>FB88, chơi thả ga không sợ lỗ</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <img
+              src="./images/td.jfif"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Trần Dần</h5>
+              <p>Thằng nào chửi tục tao bắn ch*t m*</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        const list = document.querySelector(".comment-list");
+        const items = document.querySelectorAll(".comment-item");
+
+        function slide() {
+          const itemWidth = items[0].offsetWidth + 20; // width + gap
+
+          // trượt sang trái 1 item
+          list.style.transition = "transform 0.5s ease";
+          list.style.transform = `translateX(-${itemWidth}px)`;
+
+          // khi trượt xong → đẩy item đầu xuống cuối → reset translate
+          setTimeout(() => {
+            list.appendChild(list.firstElementChild);
+            list.style.transition = "none";
+            list.style.transform = "translateX(0)";
+          }, 500);
+        }
+
+        setInterval(slide, 3000); // chạy mỗi 3s
+      </script>
+    </section>
+    <section class="footage-section">
+      <h2 class="footage-title">🎬 Footage</h2>
+
+      <div class="footage-grid">
+        <div class="footage-item">
+          <video src="./footage/f1.mp4" muted loop></video>
+          <span class="footage-name">Behind The Scenes</span>
+        </div>
+
+        <div class="footage-item">
+          <video src="./footage/f2.mp4" muted loop></video>
+          <span class="footage-name">Action Sequence</span>
+        </div>
+
+        <div class="footage-item">
+          <video src="./footage/f3.mp4" muted loop></video>
+          <span class="footage-name">Deleted Scene</span>
+        </div>
+
+        <div class="footage-item">
+          <video src="./footage/f4.mp4" muted loop></video>
+          <span class="footage-name">Behind The Voice</span>
+        </div>
+      </div>
+      <script>
+        const videos = document.querySelectorAll(".footage-item video");
+
+        videos.forEach((video) => {
+          video.addEventListener("mouseenter", () => video.play());
+          video.addEventListener("mouseleave", () => video.pause());
+        });
+      </script>
+    </section>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="./images/logo.png" alt="Cinemount Logo" />
+          <div>
+            <h2>CINEMOUNT</h2>
+            <p>Trang phim được dựng bởi 5 thằng ngu</p>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <span>➡️</span>
+          <span>🎮</span>
+          <span>💬</span>
+          <span>❌</span>
+          <span>📘</span>
+          <span>🎵</span>
+          <span>📺</span>
+          <span>📸</span>
+          <span>🖼️</span>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Hỏi-Đáp</a>
+        <a href="#">Chính sách bảo mật</a>
+        <a href="#">Điều khoản sử dụng</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Liên hệ</a>
+      </div>
+
+      <div class="footer-tags">
+        <a href="#">Dongphim</a>
+        <a href="#">Ghenphim</a>
+        <a href="#">Motphim</a>
+        <a href="#">Subnhanh</a>
+      </div>
+
+      <p class="footer-desc">
+        Cinemount – Trang xem phim online chất lượng cao miễn phí Vietsub,
+        thuyết minh, lồng tiếng full HD. Kho phim mới cập nhật liên tục với
+        nhiều thể loại...
+      </p>
+
+      <p class="footer-copy">© 2024 Cinemount</p>
+    </footer>
   </body>
 </html>
