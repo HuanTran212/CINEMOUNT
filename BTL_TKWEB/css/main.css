@@ -17,7 +17,7 @@
 body {
   background: var(--bg);
   color: var(--text);
-  /* padding: 0 40px; */
+  padding: 0 40px;
 }
 
 /* HEADER */
@@ -422,7 +422,7 @@ body {
 /* ================== 1. HEADER ================== */
 #main-header {
     /* background-color: #202225;*/
-    background-color: rgba(51, 51, 51, 0); 
+    background-color: rgba(0, 0, 0, 0); 
     transition: background-color 0.3s linear;
     width: 100%;
     position: fixed;
@@ -433,7 +433,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .logo {
@@ -486,7 +486,7 @@ body {
 
 .player-placeholder {
     background-color: #000;
-    height: 400px;
+    height: 450px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -495,10 +495,17 @@ body {
     margin-bottom: 30px;
 }
 
+.player-placeholder img {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 20px 10px rgba(0,0,0,0.8);
+}
+
 /* Khu vực Chi tiết và Sidebar */
 .content-wrapper {
     display: flex;
-    gap: 0px; /* Khoảng cách giữa các cột */
+    gap: 30px; /* Khoảng cách giữa các cột */
     margin-bottom: 40px;
 }
 
@@ -516,10 +523,29 @@ body {
     border-radius: 40px;
 }
 
+.sidebar img {
+  border-radius: 20px;
+  width: 160px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.sidebar h3{
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.genre-list {
+  list-style-type: none;
+  /* padding: 0;
+  margin: 0;  */
+}
+
 .movie-details h2,
 .movie-details h3,
-.movie-details h4,
-.sidebar h3 {
+.movie-details h4{
   color: #e50914;
   margin-top: 15px;
   margin-bottom: 10px;
