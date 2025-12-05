@@ -499,7 +499,7 @@ body {
   height: 450px;
   width: 100%;
   object-fit: cover;
-  box-shadow: 0 0 20px 10px rgba(0,0,0,0.8);
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.8);
 }
 
 /* Khu vực Chi tiết và Sidebar */
@@ -530,7 +530,7 @@ body {
   object-fit: cover;
 }
 
-.sidebar h3{
+.sidebar h3 {
   color: #ffffff;
   margin-top: 15px;
   margin-bottom: 10px;
@@ -545,7 +545,7 @@ body {
 
 .movie-details h2,
 .movie-details h3,
-.movie-details h4{
+.movie-details h4 {
   color: #e50914;
   margin-top: 15px;
   margin-bottom: 10px;
@@ -694,6 +694,58 @@ body {
   }
 
   /* HEADER */
+  @media (max-width: 768px) {
+    .nav {
+      position: fixed;
+      top: 70px;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      flex-direction: column;
+      padding: 40px 20px;
+      gap: 25px;
+      transition: 0.4s ease;
+    }
+
+    /* Khi active thì hiện menu */
+    .nav.active {
+      right: 0;
+      top: 60px;
+    }
+
+    /* Hiện nút hamburger trên mobile */
+    .menu-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 35px;
+      height: 28px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .menu-btn span {
+      width: 100%;
+      height: 4px;
+      background: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    /* Hiệu ứng biến hamburger thành X */
+    .menu-btn.active span:nth-child(1) {
+      transform: translateY(12px) rotate(45deg);
+    }
+    .menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-btn.active span:nth-child(3) {
+      transform: translateY(-12px) rotate(-45deg);
+    }
+  }
+
   .header {
     padding: 0 20px;
     height: 60px;
