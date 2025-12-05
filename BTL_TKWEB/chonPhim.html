@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./fonts/fontawesome-free-7.1.0-web/css/all.css">
 </head>
 <body>
-     <header class="header">
+    <header class="header">
       <div class="logo">
         <img
           src="images/logo.png"
@@ -32,6 +33,7 @@
         <a href="#">TV Shows</a>
       </nav>
     </header>
+    
     <header class="header">
       <div class="logo">
         <img
@@ -86,13 +88,21 @@
 
                     <h3>Guardian Of The Galaxy vol 3</h3>
 
+                    <div class="movie-info">
+                        <ul class="info-list">
+                            <li id="IMDb">IMDb 7.8</li>
+                            <li id="age-rating">T16</li>
+                            <li>2023</li>
+                            <li>2h 30m</li>
+                        </ul>
+                    </div>
+
                     <div class="genre-section">
                         <ul class="genre-list">
-                            <li><a href="#">IMDb 7.8</a></li>
-                            <li><a href="#">T16</a></li>
                             <li><a href="#">Hành Động</a></li>
                             <li><a href="#">Viễn Tưởng</a></li>
                             <li><a href="#">Kịch Tính</a></li>
+                            <li><a href="#">Phiêu Lưu</a></li>
                             <li><a href="#">Hài</a></li>
                         </ul>
                     </div>
@@ -107,9 +117,32 @@
                 </aside>
                 
                 <section class="movie-details">
-                    <h2>Thông tin phim</h2>
-                    <div class="meta-info">
-                        <span>7.8</span> | <span>2025</span> | <span>1h 58m</span>
+                    <div class="control-bar">
+                      <div class="control-bar-1">
+                        <a href="">
+                          <div><i class="fa-solid fa-play"></i></div>
+                          <p>Xem Ngay</p>
+                        </a>
+                      </div>
+
+                      <div class="control-bar-2">
+                        <a class="item-like" href="">
+                          <div><i class="fa-solid fa-heart"></i></div>
+                          <p>Yêu Thích</p>
+                        </a>
+                        <a class="item-playlist" href="">
+                          <div><i class="fa-solid fa-plus"></i></div>
+                          <p>Thêm Vào</p>
+                        </a>
+                        <a class="item-share" href="">
+                          <div><i class="fa-solid fa-share"></i></div>
+                          <p>Chia Sẽ</p>
+                        </a>
+                        <a class="item-comment" href="">
+                          <div><i class="fa-solid fa-comment"></i></div>
+                          <p>Bình Luận</p>
+                        </a>
+                      </div>
                     </div>
                     
                     <div class="tabs-navigation">
