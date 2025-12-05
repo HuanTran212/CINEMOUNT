@@ -413,20 +413,20 @@ body {
 
 /* Container giới hạn chiều rộng nội dung */
 .container {
-    width: 96%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
+  width: 96%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
 /* ================== 1. HEADER ================== */
 #main-header {
-    /* background-color: #202225;*/
-    background-color: rgba(51, 51, 51, 0); 
-    transition: background-color 0.3s linear;
-    width: 100%;
-    position: fixed;
-    transition: transform 0.3s ease; /* hiệu ứng ẩn/hiện */
+  /* background-color: #202225;*/
+  background-color: rgba(51, 51, 51, 0);
+  transition: background-color 0.3s linear;
+  width: 100%;
+  position: fixed;
+  transition: transform 0.3s ease; /* hiệu ứng ẩn/hiện */
 }
 
 #main-header .container {
@@ -485,35 +485,35 @@ body {
 } */
 
 .player-placeholder {
-    background-color: #000;
-    height: 400px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-    margin-bottom: 30px;
+  background-color: #000;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  margin-bottom: 30px;
 }
 
 /* Khu vực Chi tiết và Sidebar */
 .content-wrapper {
-    display: flex;
-    gap: 0px; /* Khoảng cách giữa các cột */
-    margin-bottom: 40px;
+  display: flex;
+  gap: 0px; /* Khoảng cách giữa các cột */
+  margin-bottom: 40px;
 }
 
 .movie-details {
-    flex: 3;
-    border-radius: 40px;
-    background-color: #202225;
-    padding: 20px;
+  flex: 3;
+  border-radius: 40px;
+  background-color: #202225;
+  padding: 20px;
 }
 
 .sidebar {
-    flex: 1.2; 
-    background-color: #202225;
-    padding: 20px;
-    border-radius: 40px;
+  flex: 1.2;
+  background-color: #202225;
+  padding: 20px;
+  border-radius: 40px;
 }
 
 .movie-details h2,
