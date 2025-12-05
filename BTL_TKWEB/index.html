@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movies Bazer</title>
+    <title>CINEMOUNT</title>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
 
@@ -68,6 +68,16 @@
         <a href="#">Movies</a>
         <a href="#">TV Shows</a>
       </nav>
+
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const nav = document.getElementById("nav");
+
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          nav.classList.toggle("active");
+        });
+      </script>
     </header>
 
     <!-- Hero Section -->
@@ -335,8 +345,10 @@
         const videos = document.querySelectorAll(".footage-item video");
 
         videos.forEach((video) => {
-          video.addEventListener("mouseenter", () => video.play());
-          video.addEventListener("mouseleave", () => video.pause());
+          video.muted = true;
+          video.autoplay = true;
+          video.loop = true;
+          video.play();
         });
       </script>
     </section>
@@ -386,5 +398,15 @@
 
       <p class="footer-copy">© 2024 Cinemount</p>
     </footer>
+
+
+
+
+
+
+
+
+    
+    <script src="js/main.js"></script>
   </body>
 </html>

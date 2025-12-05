@@ -30,10 +30,13 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.6);
+  /* backdrop-filter: blur(10px); */
+  /* background: rgba(0, 0, 0, 0.6); */
   padding: 0 70px 0 0;
   left: 0;
+
+  background-color: rgba(0, 0, 0, 0); 
+  transition: background-color 0.3s linear;
 }
 
 .logo {
@@ -406,7 +409,7 @@ body {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #181a1d; /* Màu nền tối (thường thấy ở các trang web xem phim) */
+  background-color: #181a1d; /* Màu nền tối */
   color: #e0e0e0; /* Màu chữ sáng */
   line-height: 1.6;
 }
@@ -420,16 +423,7 @@ body {
 }
 
 /* ================== 1. HEADER ================== */
-#main-header {
-  /* background-color: #202225;*/
-  background-color: rgba(51, 51, 51, 0);
-  transition: background-color 0.3s linear;
-  width: 100%;
-  position: fixed;
-  transition: transform 0.3s ease; /* hiệu ứng ẩn/hiện */
-}
-
-#main-header .container {
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -499,7 +493,7 @@ body {
   height: 450px;
   width: 100%;
   object-fit: cover;
-  box-shadow: 0 0 20px 10px rgba(0,0,0,0.8);
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.8);
 }
 
 /* Khu vực Chi tiết và Sidebar */
@@ -530,22 +524,117 @@ body {
   object-fit: cover;
 }
 
-.sidebar h3{
+.sidebar h3 {
   color: #ffffff;
   margin-top: 15px;
   margin-bottom: 10px;
   font-size: 25px;
 }
 
+.info-list{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-list li {
+  margin-right: 8px;
+  margin-top: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 10px;
+  background-color: #4e4c4c;
+  padding: 6px;
+  border-radius: 4px;
+  border: white 1px solid;
+}
+
+#IMDb{
+  color: rgb(209, 209, 64);
+  border: rgb(209, 209, 64) 1px solid;
+  background-color: #202225;
+}
+
+#age-rating{
+  color: #000;
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
 .genre-list {
   list-style-type: none;
-  /* padding: 0;
-  margin: 0;  */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genre-list li {
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.genre-list li a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 10px;
+  background-color: #4e4c4c;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.control-bar{
+  display: flex;
+}
+
+.control-bar .control-bar-1 {
+  flex: 1;
+  background-color: rgb(254, 192, 34);
+  border-radius: 8px;
+}
+
+.control-bar .control-bar-1 a{
+  text-decoration: none;
+  /* display: inline-block; */
+  /* text-align: center; */
+  /* background-color: rgb(254, 192, 34); */
+  color: #000;
+  text-align: center;
+}
+
+.control-bar .control-bar-1:hover{
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  box-shadow: 0 0 20px 10px rgba(254, 192, 34,0.5);
+}
+
+.control-bar .control-bar-2{
+  flex: 3;
+  display: flex;
+}
+
+.control-bar .control-bar-2 a{
+  /* display: flex; */
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+  border-radius: 8px;
+}
+
+.control-bar .control-bar-2 a:hover{
+  text-decoration: none;
+  color: rgb(254, 192, 34);
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #181a1d;
 }
 
 .movie-details h2,
 .movie-details h3,
-.movie-details h4{
+.movie-details h4 {
   color: #e50914;
   margin-top: 15px;
   margin-bottom: 10px;
@@ -574,8 +663,8 @@ body {
 }
 
 .tabs-navigation a.active {
-  color: #e50914;
-  border-bottom-color: #e50914;
+  color: var(--primary);
+  border-bottom-color: var(--primary);
   font-weight: bold;
 }
 
@@ -694,6 +783,58 @@ body {
   }
 
   /* HEADER */
+  @media (max-width: 768px) {
+    .nav {
+      position: fixed;
+      top: 70px;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      flex-direction: column;
+      padding: 40px 20px;
+      gap: 25px;
+      transition: 0.4s ease;
+    }
+
+    /* Khi active thì hiện menu */
+    .nav.active {
+      right: 0;
+      top: 60px;
+    }
+
+    /* Hiện nút hamburger trên mobile */
+    .menu-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 35px;
+      height: 28px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .menu-btn span {
+      width: 100%;
+      height: 4px;
+      background: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    /* Hiệu ứng biến hamburger thành X */
+    .menu-btn.active span:nth-child(1) {
+      transform: translateY(12px) rotate(45deg);
+    }
+    .menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-btn.active span:nth-child(3) {
+      transform: translateY(-12px) rotate(-45deg);
+    }
+  }
+
   .header {
     padding: 0 20px;
     height: 60px;
