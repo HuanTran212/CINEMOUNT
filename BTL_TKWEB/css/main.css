@@ -433,7 +433,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .logo {
@@ -495,6 +495,13 @@ body {
   margin-bottom: 30px;
 }
 
+.player-placeholder img {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 20px 10px rgba(0,0,0,0.8);
+}
+
 /* Khu vực Chi tiết và Sidebar */
 .content-wrapper {
   display: flex;
@@ -516,10 +523,29 @@ body {
   border-radius: 40px;
 }
 
+.sidebar img {
+  border-radius: 20px;
+  width: 160px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.sidebar h3{
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.genre-list {
+  list-style-type: none;
+  /* padding: 0;
+  margin: 0;  */
+}
+
 .movie-details h2,
 .movie-details h3,
-.movie-details h4,
-.sidebar h3 {
+.movie-details h4{
   color: #e50914;
   margin-top: 15px;
   margin-bottom: 10px;
