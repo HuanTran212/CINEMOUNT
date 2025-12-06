@@ -720,7 +720,343 @@ body {
         transform: translateX(-50%);
     }
 }
+.skew-movie-section {
+    margin-top: 50px;
+    padding: 0 20px;
+}
 
+.skew-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa các tấm */
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+/* KHUNG BAO NGOÀI (Hình bình hành) */
+.skew-card {
+    position: relative;
+    width: 200px; /* Độ rộng của mỗi phim */
+    height: 120px; /* Chiều cao */
+    background: #000;
+    overflow: hidden; /* Cắt phần ảnh thừa để ra hình nghiêng */
+    
+    /* NGHIÊNG KHUNG */
+    transform: skewX(-20deg); 
+    
+    border-right: 4px solid #333; /* Đường viền bên phải giống hình mẫu */
+    border-left: 2px solid #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Xử lý ảnh bên trong (Để ảnh không bị méo theo khung) */
+.skew-image {
+    width: 100%;
+    height: 100%;
+    
+    /* NGHIÊNG NGƯỢC LẠI ĐỂ ẢNH THẲNG */
+    /* Scale 1.4 để ảnh to hơn khung, lấp đầy các góc nhọn */
+    transform: skewX(20deg) scale(1.4); 
+    
+    transform-origin: center;
+    transition: transform 0.5s ease;
+}
+
+.skew-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; /* Làm tối ảnh một chút */
+    transition: 0.3s;
+}
+
+/* THÔNG TIN (Số thứ tự & Tên) */
+.skew-info {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    z-index: 2;
+    
+    /* Nghiêng ngược lại text để dễ đọc */
+    transform: skewX(20deg); 
+    pointer-events: none;
+}
+
+.skew-info .rank {
+    font-size: 30px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.2); /* Số mờ */
+    position: absolute;
+    top: -25px;
+    left: -10px;
+}
+
+.skew-info h4 {
+    color: #fff;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px black;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* --- HIỆU ỨNG HOVER & ACTIVE --- */
+
+/* Hover vào card */
+.skew-card:hover {
+    width: 250px; /* Giãn rộng ra khi di chuột */
+    border-right-color: var(--primary); /* Đổi màu viền */
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(255, 0, 106, 0.4);
+}
+
+.skew-card:hover .skew-image img {
+    opacity: 1; /* Sáng ảnh lên */
+}
+
+/* ACTIVE CARD (Màu vàng giống Top 1 hoặc item đang chọn) */
+.skew-card.active {
+    border-right: 5px solid #ffc107; /* Viền vàng */
+    border-top: 2px solid rgba(255, 193, 7, 0.5);
+}
+
+.skew-card.active .skew-image img {
+    opacity: 1;
+}
+
+.skew-card.active .rank {
+    color: #ffc107; /* Số rank màu vàng */
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .skew-wrapper {
+        justify-content: flex-start; /* Để lướt ngang */
+        padding-left: 20px;
+    }
+    .skew-card {
+        width: 160px;
+        height: 100px;
+        flex-shrink: 0; /* Không bị co lại */
+    }
+}
+/* --- MOVIE INFO PANEL (Bảng thông tin bên dưới) --- */
+
+.movie-info-panel {
+    position: relative;
+    margin-top: 20px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 300px;
+    border-top: 4px solid var(--primary); /* Viền màu chủ đạo trên cùng */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: all 0.5s ease;
+    opacity: 0; /* Mặc định ẩn, JS sẽ hiện lên */
+    transform: translateY(20px);
+}
+
+/* Class này được JS thêm vào để hiện bảng */
+.movie-info-panel.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ảnh nền mờ phía sau */
+.panel-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px) brightness(0.3); /* Làm mờ và tối đi */
+    z-index: 0;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.panel-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+}
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0; /* Nằm dưới cùng */
+}
+
+.video-background iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw; 
+    height: 100vh;
+    
+    /* Căn giữa video */
+    transform: translate(-50%, -50%) scale(1.2); 
+    
+    pointer-events: none;
+    opacity: 1; 
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Lớp phủ màu tối gradient để chữ dễ đọc hơn */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        #1a1a1a 0%,          
+        rgba(26, 26, 26, 0.4) 40%,  
+        rgba(26, 26, 26, 0.1) 100% 
+    );
+    z-index: 1;
+}
+
+.panel-content {
+    position: relative;
+    z-index: 2; 
+}
+/* Phần chữ bên trái */
+.panel-text {
+    flex: 2;
+    color: #fff;
+    animation: slideInLeft 0.5s ease;
+}
+
+.panel-text h2 {
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    color: var(--primary); /* Dùng màu chủ đạo của web bạn */
+}
+
+.panel-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.meta-tag {
+    background: rgba(255,255,255,0.1);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.meta-tag.rating {
+    color: #ffc107; /* Màu vàng ngôi sao */
+    border-color: #ffc107;
+}
+
+.panel-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* Nút bấm */
+.panel-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    color: var(--primary);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Phần ảnh Poster bên phải */
+.panel-poster {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    animation: slideInRight 0.5s ease;
+}
+
+.panel-poster img {
+    max-height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+    transform: rotate(3deg); /* Nghiêng nhẹ cho nghệ */
+    border: 3px solid #fff;
+}
+
+/* Hiệu ứng Animation khi đổi nội dung */
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .panel-content {
+        flex-direction: column-reverse; /* Đưa ảnh lên trên hoặc chữ xuống dưới */
+        padding: 20px;
+        text-align: center;
+    }
+    .panel-meta, .panel-actions {
+        justify-content: center;
+    }
+    .panel-poster img {
+        max-height: 150px;
+        margin-bottom: 20px;
+    }
+}
 /* Rank style cũ giữ nguyên, thêm rank-others cho top 8-10 */
 .rank-others {
     background: #666;
