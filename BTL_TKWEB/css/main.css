@@ -83,26 +83,110 @@ body {
 }
 
 /* HERO */
-.hero {
-  margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Hero full màn hình */
+.hero-poster {
+  position: relative;
+  right: 80px;   /* chỉnh vị trí poster bên phải */
+  bottom: 50px;  /* hoặc center tùy bạn */
+  z-index: 4;    /* cao nhất */
 }
 
+.hero-poster img {
+  width: 320px;
+  border-radius: 12px;
+  position: absolute;
+    right: 0px;
+    top: 200px;
+}
+
+/* Play button trên poster */
+.play-btn {
+  z-index: 10000;
+    position: absolute;
+    right: 130px;
+    background: #fff;
+    color: #000;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    top: 400px;
+}
+
+.play-btn:hover {
+  transform: scale(1.15);
+}
+.hero {
+  top: 100px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+ width: 100%;
+ height: 70vh;
+  overflow: hidden;
+
+}
+
+/* Video full màn hình */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* luôn che kín màn hình */
+  z-index: 0;
+  filter: blur(4px) brightness(0.45); 
+  /* blur video + tối video */
+}
+
+/* Lớp overlay đen mờ */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(24, 26, 29, 0.45); /* lớp tối thêm */
+  z-index: 1;
+}
+
+/* Nội dung hero */
 .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #fff;
   max-width: 500px;
 }
 
+/* ---- TEXT CONTENT ---- */
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 500px;
+  color: #fff;
+}
 .hero-content h2 {
   font-size: 40px;
   font-weight: 700;
+  color: #fff;
 }
 
 .hero-content h1 {
   font-size: 48px;
   margin-top: -5px;
   font-weight: 800;
+  color: #fff;
 }
 
 .hero-content h1 span {
@@ -129,46 +213,16 @@ body {
   gap: 8px;
   transition: 0.3s;
 }
-
 .btn:hover {
-  background: #fff;
-  color: #000;
+  background: #fff;   /* nền trắng */
+  color: #000;        /* chữ đen */
 }
 
-.hero-poster {
-  position: relative;
-}
 
-.hero-poster img {
-  width: 340px;
-  border-radius: 12px;
-}
-
-.play-btn {
-  position: absolute;
-  top: 42%;
-  left: 42%;
-  background: #fff;
-  color: #000;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.play-btn:hover {
-  transform: scale(1.15);
-}
 
 /* MOVIE SECTIONS */
 .section {
-  margin-top: 70px;
+  margin-top: 170px;
 }
 
 .section-header {
@@ -715,6 +769,22 @@ body {
   color: #888;
   margin-top: 10px;
 }
+/* reponsive khác */
+@media (max-width: 1069px){
+  .hero-poster{
+    display: none;
+
+  }
+  .hero-content{
+    text-align: left;
+    position: relative;
+  }
+  button .btn{
+    position: absolute;
+    left: 0;
+  }
+ 
+}
 
 /* ================== 4. RESPONSIVE (Dành cho điện thoại) ================== */
 @media (max-width: 768px) {
@@ -777,6 +847,7 @@ body {
 /* reponsive */
 /* MOBILE ≤ 768px */
 @media (max-width: 768px) {
+  
   body {
     padding: 0 20px;
     margin: auto;
@@ -784,6 +855,7 @@ body {
 
   /* HEADER */
   @media (max-width: 768px) {
+    
     .nav {
       position: fixed;
       top: 70px;
@@ -845,10 +917,22 @@ body {
   }
 
   /* HERO */
+   .hero-content button{
+    margin-left: 0;
+   }
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 500px;
+    color: #fff;
+}
   .hero {
     flex-direction: column;
-    text-align: center;
-    gap: 25px;
+    /* text-align: center; */
+
   }
 
   .hero-content h2 {
@@ -917,7 +1001,7 @@ body {
     padding: 0 30px;
   }
   button.btn {
-    margin: auto;
+    left: 0;
   }
   /* HEADER */
   .header {

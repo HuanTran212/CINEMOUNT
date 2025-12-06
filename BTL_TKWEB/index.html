@@ -28,7 +28,7 @@
 
       <nav class="nav">
         <a href="#" class="active">Home</a>
-        <a href="#">Explore</a>
+        <a href="#">Phim lẻ</a>
         <a href="#">Genre</a>
         <a href="#">News</a>
         <a href="#">Movies</a>
@@ -82,8 +82,13 @@
 
     <!-- Hero Section -->
     <!-- HERO -->
-    <section class="hero">
-      <div class="hero-content">
+    <section class="hero"> 
+      <video class="hero-video" src="./video/./hero.mp4" muted loop></video>
+
+  <div class="overlay"></div>
+
+       
+  <div class="hero-content">
         <h2>FIND MOVIES</h2>
         <h1><span>TV SHOWS</span> AND MORE</h1>
 
@@ -95,12 +100,21 @@
 
         <button class="btn"><span>▶</span> Watch Tutorial</button>
       </div>
-
       <div class="hero-poster">
-        <img src="./images/v1_880.png" alt="Spider-Man Poster" />
+        <img src="./images/./poster.jpg" alt="Spider-Man Poster" style="z-index: 1000;" />
         <div class="play-btn">▶</div>
       </div>
-    </section>
+  <script>
+        const videoss = document.querySelectorAll(".hero video");
+
+        videoss.forEach((video) => {
+          video.muted = true;
+          video.autoplay = true;
+          video.loop = true;
+          video.play();
+        });
+      </script>
+</section>
 
     <!-- TRENDING -->
     <section class="section">
@@ -322,22 +336,22 @@
 
       <div class="footage-grid">
         <div class="footage-item">
-          <video src="./footage/hoangtuquy.mp4" muted loop></video>
+          <video src="./video/hoangtuquy.mp4" muted loop></video>
           <span class="footage-name">HOÀNG TỬ QUỶ</span>
         </div>
 
         <div class="footage-item">
-          <video src="./footage/tuchientrenkhong.mp4" muted loop></video>
+          <video src="./video/tuchientrenkhong.mp4" muted loop></video>
           <span class="footage-name">TỬ CHIẾN TRÊN KHÔNG</span>
         </div>
 
         <div class="footage-item">
-          <video src="./footage/avatar3.mp4" muted loop></video>
+          <video src="./video/avatar3.mp4" muted loop></video>
           <span class="footage-name">Avatar 3: Lửa Và Tro Tàn</span>
         </div>
 
         <div class="footage-item">
-          <video src="./footage/dancago.mp4" muted loop></video>
+          <video src="./video/dancago.mp4" muted loop></video>
           <span class="footage-name">Đàn Cá Gỗ</span>
         </div>
       </div>
