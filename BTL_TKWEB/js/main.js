@@ -13,3 +13,8 @@ window.addEventListener("scroll", () => {
 
     header.style.background = `rgba(0, 0, 0, ${opacity})`;
 });
+
+    const track = document.querySelector('.weekly-track');
+    const moviesContent = track.innerHTML;
+    track.innerHTML = moviesContent + moviesContent;
+

@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <!-- <link rel="stylesheet" href="./fonts/fontawesome-free-7.1.0-web/css/all.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-    <header class="header">
+     <header class="header">
       <div class="logo">
         <img
           src="images/logo.png"
@@ -34,7 +32,6 @@
         <a href="#">TV Shows</a>
       </nav>
     </header>
-    
     <header class="header">
       <div class="logo">
         <img
@@ -71,22 +68,45 @@
     </header>
 
     <main id="movie-main">
+      <div class="player-header">
+      </div>
 
-        <div class="player-placeholder">
-            <img src="images/guardianMovie3.png" />
+    <div class="player-container">
+      <iframe 
+        class="youtube-video"
+        src="https://www.youtube.com/embed/u3V5KDHRQvk?autoplay=1" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+      <div class="player-overlay">
+        
+          <div class="player-back">
+            <a href="index.html"> <i class="fa-solid fa-chevron-left"></i> Quay lại</a>
+          </div>
+      
+        <div class="player-center"></div>
+
+        <div class="player-controls">
+          <div class="left-controls">
+              <button>♥ Yêu thích</button>
+              <button>+ Thêm vào</button>
+          </div>
+          <div class="right-controls">
+              <button>Chia sẻ</button>
+              <button>Báo lỗi</button>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class="container">
+        
+       <div class="container">
             <div class="content-wrapper">
                 <aside class="sidebar">
                     <img src="images/v1_878.png"/>
-                    <!-- <h3>Top phim tuần này</h3> -->
-                    <!-- <ul class="related-list">
-                        <li><a href="#">Phim Liên Quan 1</a></li>
-                        <li><a href="#">Phim Liên Quan 2</a></li>
-                        <li><a href="#">Phim Liên Quan 3</a></li>
-                    </ul> -->
-
+                
                     <h3>Guardian Of The Galaxy vol 3</h3>
 
                     <div class="movie-info">
@@ -107,45 +127,9 @@
                             <li><a href="#">Hài</a></li>
                         </ul>
                     </div>
-
-
-                    
-                    <!-- <h3>Có thể bạn sẽ thích</h3>
-                    <ul class="related-list">
-                         <li><a href="#">Phim Đề Xuất A</a></li>
-                        <li><a href="#">Phim Đề Xuất B</a></li>
-                    </ul> -->
                 </aside>
                 
                 <section class="movie-details">
-                    <div class="control-bar">
-                      <div class="control-bar-1">
-                        <a href="">
-                          <div><i class="fa-solid fa-play"></i></div>
-                          <p>Xem Ngay</p>
-                        </a>
-                      </div>
-
-                      <div class="control-bar-2">
-                        <a class="item-like" href="">
-                          <div><i class="fa-solid fa-heart"></i></div>
-                          <p>Yêu Thích</p>
-                        </a>
-                        <a class="item-playlist" href="">
-                          <div><i class="fa-solid fa-plus"></i></div>
-                          <p>Thêm Vào</p>
-                        </a>
-                        <a class="item-share" href="">
-                          <div><i class="fa-solid fa-share"></i></div>
-                          <p>Chia Sẽ</p>
-                        </a>
-                        <a class="item-comment" href="">
-                          <div><i class="fa-solid fa-comment"></i></div>
-                          <p>Bình Luận</p>
-                        </a>
-                      </div>
-                    </div>
-                    
                     <div class="tabs-navigation">
                         <a href="#" class="active">Giới thiệu</a>
                         <a href="#">Tập phim</a>
@@ -173,9 +157,9 @@
 
         </div>
         </section>
-       </div> <div class="weekly-bar-section">
+       </div>
+  <div class="weekly-bar-section">
     <h3>🔥 Top Phim Tuần Này</h3>
-    
     <div class="marquee-container">
         <div class="weekly-track">
             
@@ -298,10 +282,9 @@
                     <p>800K views</p>
                 </div>
             </div>
-
         </div>
     </div>
-</div>
+  </div>
     </main>
     <section>
       <div class="comment_2">
@@ -486,13 +469,6 @@
 
       <p class="footer-copy">© 2024 Cinemount</p>
     </footer>
-
-
-
-
-
-
-
 
     <script src="js/main.js"></script>
 </body>
