@@ -46,7 +46,7 @@ const moviesData = [
         year: "2025",
         rating: "8.0",
         duration: "1h 49m",
-        desc: "Hành trình mới của Moana ra khơi xa để kết nTrên những ngọn núi tuyết của Nagano, một vụ án bí ẩn đã đưa Conan và các thám tử quay trở lại quá khứ. Thanh tra Yamato Kansuke - người đã bị thương nặng trong một trận tuyết lở nhiều năm trước - bất ngờ phải đối mặt với những ký ức đau thương của mình trong khi điều tra một vụ tấn công tại Đài quan sát Nobeyama. Cùng lúc đó, Mori Kogoro nhận được một cuộc gọi từ một đồng nghiệp cũ, tiết lộ mối liên hệ đáng ngờ giữa anh ta và vụ án đã bị lãng quên từ lâu. Sự xuất hiện của Morofushi Takaaki, cùng với những nhân vật chủ chốt như Amuro Tooru, Kazami và cảnh sát Tokyo, càng làm phức tạp thêm cuộc điều tra. Khi quá khứ và hiện tại đan xen, một bí ẩn rùng rợn dần dần được hé lộ - và ký ức của Kansuke nắm giữ chìa khóa cho mọi thứ.ối các hòn đảo...",
+        desc: "Trên những ngọn núi tuyết của Nagano, một vụ án bí ẩn đã đưa Conan và các thám tử quay trở lại quá khứ. Thanh tra Yamato Kansuke - người đã bị thương nặng trong một trận tuyết lở nhiều năm trước - bất ngờ phải đối mặt với những ký ức đau thương của mình trong khi điều tra một vụ tấn công tại Đài quan sát Nobeyama. Cùng lúc đó, Mori Kogoro nhận được một cuộc gọi từ một đồng nghiệp cũ, tiết lộ mối liên hệ đáng ngờ giữa anh ta và vụ án đã bị lãng quên từ lâu. Sự xuất hiện của Morofushi Takaaki, cùng với những nhân vật chủ chốt như Amuro Tooru, Kazami và cảnh sát Tokyo, càng làm phức tạp thêm cuộc điều tra. Khi quá khứ và hiện tại đan xen, một bí ẩn rùng rợn dần dần được hé lộ - và ký ức của Kansuke nắm giữ chìa khóa cho mọi thứ.",
         img: "images/connan28.jpg",
         trailerId: "5bKBCTpbTb4" 
     },
@@ -54,8 +54,8 @@ const moviesData = [
         title: "Zootopia 2",
         year: "2025",
         rating: "9.0",
-        duration: "1h 40m",
-        desc: "Judy Hopps và Nick Wilde trở lại với vụ án bí ẩn mới...",
+        duration: "1h 50m",
+        desc: "Hai thám tử Judy Hopps và Nick Wilde bước vào hành trình truy tìm một sinh vật bò sát bí ẩn vừa xuất hiện tại Zootopia và khiến cả vương quốc động vật bị đảo lộn. Để phá được vụ án, Judy và Nick buộc phải hoạt động bí mật tại những khu vực mới lạ của thành phố – nơi mối quan hệ đồng nghiệp của họ bị thử thách hơn bao giờ hết.",
         img: "images/zootopia2.jpg",
         trailerId: "BjkIOU5PhyQ&t=8s" 
     },
@@ -114,4 +114,123 @@ skewCards.forEach((card, index) => {
     });
 });
 updateInfo(0);
+// --- DỮ LIỆU ANIME ---
+const animeRankData = [
+    {
+        id: 0,
+        rank: 1,
+        rankLabel: "🏆 TOP 1",
+        title: "Attack on Titan: Trận chiến cuối cùng",
+        shortTitle: "Attack on Titan",
+        views: "🔥 3.5M Views",
+        rating: "⭐ 9.8",
+        year: "2024",
+        desc: "Trong cuộc chiến cuối cùng định đoạt số phận thế giới, Eren Yeager đã giải phóng sức mạnh tối thượng của các Titan. Dẫn đầu đội quân Titan Đại hình khổng lồ, Eren quyết tâm hủy diệt mọi kẻ thù đe dọa đến quê hương Eldia",
+        videoId: "3xNH23QkNpk",
+        img: "images/aot.jpg"
+    },
+    {
+        id: 1,
+        rank: 2,
+        rankLabel: "TOP 2",
+        title: "Thanh Gươm Diệt Quỷ: Vô Hạn Thành",
+        shortTitle: "Thanh Gươm Diệt Quỷ",
+        views: "👁️ 2.9M Views",
+        rating: "⭐ 9.6",
+        year: "2025",
+        desc: "Cuộc chiến cuối cùng bắt đầu! Tanjiro và Sát Quỷ Đoàn thâm nhập vào Vô Hạn Thành.",
+        videoId: "rf0hW__Skow",
+        img: "images/vohanthanh.jpg"
+    },
+    {
+        id: 2,
+        rank: 3,
+        rankLabel: "TOP 3",
+        title: "Jujutsu Kaisen 0",
+        shortTitle: "Jujutsu Kaisen 0",
+        views: "👁️ 2.5M Views",
+        rating: "⭐ 9.2",
+        year: "2025",
+        desc: "Nobita và Doraemon vô tình lạc vào một thế giới trung cổ tồn tại bên trong tranh.Chú Thuật Hồi Chiến 0",
+        videoId: "8QkHWlrHqlE",
+        img: "images/jujus.jpg"
+    },
+    {
+        id: 3,
+        rank: 4,
+        rankLabel: "TOP 4",
+        title: "Solo Leveling: Arise",
+        shortTitle: "Solo Leveling",
+        views: "👁️ 2.1M Views",
+        rating: "⭐ 9.0",
+        year: "2024",
+        desc: "Sung Jin-woo tiếp tục hành trình thăng cấp điên cuồng tại các hầm ngục cấp S.",
+        videoId: "OdQrlp3uYQM",
+        img: "images/solo.jpg"
+    },
+    {
+        id: 4,
+        rank: 5,
+        rankLabel: "TOP 5",
+        title: "My Hero Academia: Heroes Rising",
+        shortTitle: "My Hero Academia: Heroes Rising",
+        views: "👁️ 1.9M Views",
+        rating: "⭐ 8.9",
+        year: "2019",
+        desc: "Tác giả đã giải thích rằng movie thứ hai này có thể được mô tả như một dạng kết của Boku no Hero Academia",
+        videoId: "iaMLBWj6HjI",
+        img: "images/heroacademia.jpg"
+    }
+];
+let currentKingIndex = 0;
+function initAnimeRank() {
+    renderInterface();
+}
+
+function renderInterface() {
+    const kingData = animeRankData[currentKingIndex];
+    
+    document.getElementById('preview-rank').innerText = kingData.rankLabel;
+    document.getElementById('preview-title').innerText = kingData.title;
+    document.getElementById('preview-views').innerText = kingData.views;
+    document.getElementById('preview-rating').innerText = kingData.rating;
+    document.getElementById('preview-desc').innerText = kingData.desc;
+    const iframeEl = document.getElementById('preview-video');
+    const videoUrl = `https://www.youtube.com/embed/${kingData.videoId}?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=${kingData.videoId}`;
+    
+    iframeEl.src = videoUrl;
+    const listContainer = document.getElementById('anime-list-container');
+    listContainer.innerHTML = ''; 
+
+    animeRankData.forEach((movie, index) => {
+        if (index !== currentKingIndex) {
+            let rankStyle = '';
+            if (movie.rank === 1) rankStyle = 'color: #e50914; font-size: 20px; text-shadow: 0 0 10px red;';
+            else if (movie.rank === 2) rankStyle = 'color: #00c2ff; font-size: 18px;';
+            else if (movie.rank === 3) rankStyle = 'color: #ffc107; font-size: 18px;';
+
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'anime-item';
+            itemDiv.onclick = () => selectAnime(index);
+           itemDiv.innerHTML = `
+                <div class="rank-badge" style="${rankStyle}">${movie.rank}</div>
+                
+                <img src="${movie.img}" class="thumb"> 
+                
+                <div class="item-info">
+                    <h4>${movie.shortTitle}</h4>
+                    <span>${movie.year} • ${movie.views.split(' ')[1]}</span>
+                </div>
+            `;
+            listContainer.appendChild(itemDiv);
+        }
+    });
+}
+function selectAnime(index) {
+    currentKingIndex = index;
+    renderInterface();
+}
+
+// Gọi hàm khởi chạy ngay khi web load xong
+document.addEventListener('DOMContentLoaded', initAnimeRank);
 
