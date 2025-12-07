@@ -151,7 +151,7 @@ const animeRankData = [
         views: "👁️ 2.5M Views",
         rating: "⭐ 9.2",
         year: "2025",
-        desc: "Nobita và Doraemon vô tình lạc vào một thế giới trung cổ tồn tại bên trong tranh.Chú Thuật Hồi Chiến 0",
+        desc: "Trong tiền truyện này của loạt phim Chú thuật hồi chiến, một học sinh cấp ba chán nản đăng ký học trường Cao đẳng Chú Thuật để có thể phá bỏ lời nguyền ghê gớm đang ám cậu.",
         videoId: "8QkHWlrHqlE",
         img: "images/jujus.jpg"
     },
