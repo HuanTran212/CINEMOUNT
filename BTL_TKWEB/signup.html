@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <title>CINEMOUNT</title>
+  </head>
+  <body>
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="./video/Doremon-Movie.mp4" type="video/mp4" />
+      </video>
+  
+      <div class="overlay"></div>
+  
+      <div class="login-container">
+        <h1>CINEMOUNT</h1>
+    <form id="signupForm">
+      <input type="text" id="username" placeholder="Tên đăng nhập" required />
+      <input type="password" id="password" placeholder="Mật khẩu" required />
+      <button type="submit">Đăng ký</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          let user = document.getElementById("username").value;
+          let pass = document.getElementById("password").value;
+
+          // Lưu vào localStorage
+          localStorage.setItem("username", user);
+          localStorage.setItem("password", pass);
+          window.location.href = "login.html";
+        });
+    </script>
+  </body>
+</html>
