@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập CINEMOUNT</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+
+  <body>
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="./video/spiderman across.mp4" type="video/mp4" />
+      </video>
+  
+      <div class="overlay"></div>
+  
+      <div class="login-container">
+        <h1>CINEMOUNT</h1>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Tên đăng nhập" required />
+      <input type="password" id="password" placeholder="Mật khẩu" required />
+      <button type="submit">Đăng nhập</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          let userInput = document.getElementById("username").value;
+          let passInput = document.getElementById("password").value;
+
+          let storedUser = localStorage.getItem("username");
+          let storedPass = localStorage.getItem("password");
+
+          if (userInput === storedUser && passInput === storedPass) {
+            window.location.href = "home.html";
+          } else {
+            alert("Sai tài khoản hoặc mật khẩu!");
+          }
+        });
+    </script>
+  </body>
+</html>
