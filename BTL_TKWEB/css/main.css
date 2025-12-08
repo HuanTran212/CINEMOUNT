@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Segoe UI Normal", sans-serif;
 }
 
 body {
@@ -841,6 +841,239 @@ body {
     flex-shrink: 0; /* Không bị co lại */
   }
 }
+/* --- ANIME LEADERBOARD STYLE --- */
+.anime-section {
+    margin-bottom: 80px;
+}
+
+.anime-leaderboard {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    max-width: 1350px; /* Giới hạn chiều rộng*/
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100%;     
+}
+
+.anime-king {
+    flex: 0 0 55%; 
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 55%;
+    height: 450px;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 0 20px #bb8839(255, 0, 106, 0.2);
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.anime-king:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 30px #bb8839(255, 0, 106, 0.5);
+    border-color: var(--primary);
+}
+.king-glow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #000 10%, rgba(0,0,0,0.3) 60%, #000 100%);
+    z-index: 1;
+}
+.king-info, .king-badge {
+    z-index: 2;
+}
+.anime-king iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) scale(1.3); 
+    z-index: 0; 
+    pointer-events: none; 
+    object-fit: cover;
+}
+.anime-king::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #000 10%, transparent 80%);
+    z-index: 1;
+}
+
+.king-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #c20f3c;
+    color: #fff;
+    padding: 8px 16px;
+    font-weight: 800;
+    font-size: 18px;
+    border-radius: 8px;
+    z-index: 3;
+    box-shadow: 0 0 10px #c20f3c;
+}
+
+.king-info {
+    position: relative;
+    z-index: 3;
+    padding: 30px;
+    width: 100%;
+}
+
+.king-info h2 {
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.king-info .meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffd700;
+}
+
+.king-info .desc {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;  
+    -webkit-box-orient: vertical;
+    overflow: hidden;    
+    text-overflow: ellipsis; 
+    max-width: 100%;
+}
+
+.btn-watch {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn-watch:hover {
+    background: var(--primary);
+    color: #fff;
+}
+.anime-list-vertical {
+    flex: 1; 
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+}
+
+.anime-item {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 12px;
+    gap: 15px;
+    transition: 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.anime-item:hover {
+    background: #252525;
+    border-left: 3px solid var(--primary);
+    transform: translateX(5px);
+}
+
+.anime-item .rank-badge {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+}
+
+.rank-badge.rank-2 { color: #00c2ff; font-size: 20px; text-shadow: 0 0 10px #00c2ff; }
+.rank-badge.rank-3 { color: #ffc107; font-size: 20px; text-shadow: 0 0 10px #ffc107; }
+
+.anime-item .thumb {
+    width: 70px;
+    height: 90px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-info h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.item-info span {
+    font-size: 12px;
+    color: #888;
+}
+
+.btn-add {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #444;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+.btn-add:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+/* Hiệu ứng khi item được chọn */
+.anime-item.active {
+    background: #333;
+    border-left: 3px solid var(--primary); /* Viền hồng */
+    box-shadow: 0 0 15px #bb8839(255, 0, 106, 0.2);
+}
+
+.anime-item.active h4 {
+    color: var(--primary);
+}
+
+/* Thêm con trỏ chuột để biết là bấm được */
+.anime-item {
+    cursor: pointer; 
+}
+/* RESPONSIVE CHO MOBILE */
+@media (max-width: 900px) {
+    .anime-leaderboard {
+        flex-direction: column;
+    }
+    .anime-king {
+        height: 350px;
+    }
+    .king-info h2 {
+        font-size: 24px;
+    }
+    .king-info .desc {
+        max-width: 100%;
+    }
+}
 /* --- MOVIE INFO PANEL (Bảng thông tin bên dưới) --- */
 
 .movie-info-panel {
@@ -857,13 +1090,12 @@ body {
   transform: translateY(20px);
 }
 
-/* Class này được JS thêm vào để hiện bảng */
+
 .movie-info-panel.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Ảnh nền mờ phía sau */
 .panel-background {
   position: absolute;
   top: 0;

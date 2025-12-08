@@ -1,0 +1,207 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #080808;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== VIDEO BACKGROUND ===== */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* ===== DARK OVERLAY ===== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 8, 8, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+/* ===== FORM WRAPPER ===== */
+.login-container {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  padding: 40px 50px;
+  width: 400px;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 25px rgba(0, 194, 255, 0.2), 0 0 25px rgba(255, 0, 106, 0.2);
+  animation: fadeIn 0.6s ease;
+}
+
+/* ===== TITLE ===== */
+h1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #00c2ff, #ff006a);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* ===== LABEL ===== */
+label {
+  color: #cfcfcf;
+  display: block;
+  text-align: left;
+  margin: 12px 0 6px;
+  font-size: 15px;
+}
+
+/* ===== INPUT ===== */
+input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(15, 15, 15, 0.8);
+  border: 1px solid #222;
+  border-radius: 8px;
+  color: #fff;
+  transition: 0.25s;
+}
+
+input:focus {
+  border-color: #00c2ff;
+  box-shadow: 0 0 12px #00c2ff;
+  outline: none;
+}
+
+/* ===== BUTTON ===== */
+button {
+  width: 100%;
+  margin-top: 28px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #ff006a, #00c2ff);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 14px rgba(255, 0, 106, 0.7), 0 0 14px rgba(0, 194, 255, 0.7);
+}
+
+/* ===== LINK (Ví dụ: Chưa có tài khoản? Đăng ký) ===== */
+.form-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #cfcfcf;
+}
+
+.form-link a {
+  color: #00c2ff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.form-link a:hover {
+  color: #ff006a;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================
+       ===================== RESPONSIVE ==========================
+       ========================================================== */
+
+/* 📌 Tablet (dưới 900px) */
+@media (max-width: 900px) {
+  .login-container {
+    width: 350px;
+    padding: 35px 40px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+/* 📌 Mobile lớn (dưới 600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  .login-container {
+    width: 100%;
+    max-width: 360px;
+    padding: 30px 32px;
+    border-radius: 14px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/* 📌 Mobile nhỏ (dưới 400px – iPhone SE, iPhone 5) */
+@media (max-width: 400px) {
+  .login-container {
+    padding: 25px 25px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input {
+    padding: 9px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
