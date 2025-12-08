@@ -1,0 +1,124 @@
+/* CSS RIÊNG CHO TRANG LIÊN HỆ */
+body {
+    background-color: #0f1014; /* Màu nền tối */
+    color: #b0b3b8; /* Màu chữ xám nhạt */
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.page-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-email {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact-list li {
+    margin-bottom: 8px;
+}
+
+.highlight {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Nút mạng xã hội */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-social {
+    background-color: #ffffff;
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    transition: background-color 0.3s;
+}
+
+.btn-social:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-social i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+/* --- PHẦN RESPONSIVE CHO TRANG LIÊN HỆ --- */
+
+/* Màn hình Tablet và Mobile (nhỏ hơn 768px) */
+@media (max-width: 768px) {
+    /* Căn chỉnh lại lề container cho đỡ chật */
+    .container {
+        padding: 30px 15px;
+        width: auto;
+    }
+
+    /* Giảm kích thước chữ tiêu đề */
+    .page-title {
+        font-size: 26px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    /* Nút mạng xã hội dãn full chiều rộng để dễ bấm */
+    .btn-social {
+        width: 100%;
+        box-sizing: border-box; /* Để padding không làm vỡ khung */
+        justify-content: center; /* Căn giữa nội dung nút */
+    }
+
+    /* Chữ intro nhỏ lại một chút */
+    .intro-text {
+        font-size: 14px;
+        text-align: justify; /* Căn đều 2 bên nhìn cho gọn trên đt */
+    }
+}
