@@ -2386,7 +2386,7 @@ body {
     margin-bottom: 5px;
   }
 
-  /* 5. Tabs Navigation (Giới thiệu/Diễn viên...) */
+
   .tabs-navigation {
     display: flex;
     justify-content: space-between;
@@ -2405,4 +2405,80 @@ body {
     color: #ccc;
     line-height: 1.5;
   }
+}
+/* --- CSS CHO HEADER & MENU MOBILE --- */
+
+/* Mặc định trên PC: Ẩn nút 3 gạch */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* RESPONSIVE HEADER: Khi màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+    /* Header chính */
+    .header {
+        padding: 10px 20px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    /* Hiện nút 3 gạch */
+    .menu-btn {
+        display: flex;
+        z-index: 1001; /* Luôn nổi lên trên */
+    }
+
+    /* Hiệu ứng khi bấm nút 3 gạch (thành dấu X) */
+    .menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -8px);
+    }
+
+    /* Menu Nav: Ẩn đi và biến thành menu dọc */
+    .nav {
+        display: none; /* Mặc định ẩn */
+        position: absolute;
+        top: 100%; /* Đẩy xuống dưới header */
+        left: 0;
+        width: 100%;
+        background-color: #1a1b20; /* Màu nền menu mobile */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        z-index: 1000;
+    }
+
+    /* Khi có class active (được JS thêm vào) thì hiện menu */
+    .nav.active {
+        display: flex;
+    }
+
+    /* Link trong menu mobile */
+    .nav a {
+        margin: 15px 0;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
 }
