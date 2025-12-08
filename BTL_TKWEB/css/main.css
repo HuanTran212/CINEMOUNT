@@ -87,7 +87,7 @@ body {
 .hero-poster {
   position: relative;
   right: 80px; /* chỉnh vị trí poster bên phải */
-  bottom: 50px; /* hoặc center tùy bạn */
+  bottom: 150px; /* hoặc center tùy bạn */
   z-index: 4; /* cao nhất */
 }
 
@@ -129,7 +129,7 @@ body {
   box-sizing: border-box;
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -843,236 +843,250 @@ body {
 }
 /* --- ANIME LEADERBOARD STYLE --- */
 .anime-section {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .anime-leaderboard {
-    display: flex;
-    gap: 30px;
-    margin-top: 20px;
-    max-width: 1350px; /* Giới hạn chiều rộng*/
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 100%;     
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  max-width: 1350px; /* Giới hạn chiều rộng*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .anime-king {
-    flex: 0 0 55%; 
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    width: 55%;
-    height: 450px;
-    display: flex;
-    align-items: flex-end;
-    box-shadow: 0 0 20px #bb8839(255, 0, 106, 0.2);
-    border: 1px solid #333;
-    transition: 0.3s;
+  flex: 0 0 55%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 55%;
+  height: 450px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 0 20px #bb8839(255, 0, 106, 0.2);
+  border: 1px solid #333;
+  transition: 0.3s;
 }
 
 .anime-king:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 30px #bb8839(255, 0, 106, 0.5);
-    border-color: var(--primary);
+  transform: scale(1.01);
+  box-shadow: 0 0 30px #bb8839(255, 0, 106, 0.5);
+  border-color: var(--primary);
 }
 .king-glow {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, #000 10%, rgba(0,0,0,0.3) 60%, #000 100%);
-    z-index: 1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    #000 10%,
+    rgba(0, 0, 0, 0.3) 60%,
+    #000 100%
+  );
+  z-index: 1;
 }
-.king-info, .king-badge {
-    z-index: 2;
+.king-info,
+.king-badge {
+  z-index: 2;
 }
 .anime-king iframe {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%) scale(1.3); 
-    z-index: 0; 
-    pointer-events: none; 
-    object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%) scale(1.3);
+  z-index: 0;
+  pointer-events: none;
+  object-fit: cover;
 }
 .anime-king::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, #000 10%, transparent 80%);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #000 10%, transparent 80%);
+  z-index: 1;
 }
 
 .king-badge {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: #c20f3c;
-    color: #fff;
-    padding: 8px 16px;
-    font-weight: 800;
-    font-size: 18px;
-    border-radius: 8px;
-    z-index: 3;
-    box-shadow: 0 0 10px #c20f3c;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #c20f3c;
+  color: #fff;
+  padding: 8px 16px;
+  font-weight: 800;
+  font-size: 18px;
+  border-radius: 8px;
+  z-index: 3;
+  box-shadow: 0 0 10px #c20f3c;
 }
 
 .king-info {
-    position: relative;
-    z-index: 3;
-    padding: 30px;
-    width: 100%;
+  position: relative;
+  z-index: 3;
+  padding: 30px;
+  width: 100%;
 }
 
 .king-info h2 {
-    font-size: 32px;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .king-info .meta {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffd700;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffd700;
 }
 
 .king-info .desc {
-    font-size: 14px;
-    color: #ccc;
-    margin-bottom: 20px;
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
 
-    display: -webkit-box;
-    -webkit-line-clamp: 3;  
-    -webkit-box-orient: vertical;
-    overflow: hidden;    
-    text-overflow: ellipsis; 
-    max-width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .btn-watch {
-    display: inline-block;
-    background: #fff;
-    color: #000;
-    padding: 10px 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
 }
 .btn-watch:hover {
-    background: var(--primary);
-    color: #fff;
+  background: var(--primary);
+  color: #fff;
 }
 .anime-list-vertical {
-    flex: 1; 
-    flex-direction: column;
-    gap: 15px;
-    padding: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
 }
 
 .anime-item {
-    display: flex;
-    align-items: center;
-    background: #1a1a1a;
-    padding: 10px;
-    border-radius: 12px;
-    gap: 15px;
-    transition: 0.3s;
-    border-left: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 12px;
+  gap: 15px;
+  transition: 0.3s;
+  border-left: 3px solid transparent;
 }
 
 .anime-item:hover {
-    background: #252525;
-    border-left: 3px solid var(--primary);
-    transform: translateX(5px);
+  background: #252525;
+  border-left: 3px solid var(--primary);
+  transform: translateX(5px);
 }
 
 .anime-item .rank-badge {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 16px;
-    color: #666;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #666;
 }
 
-.rank-badge.rank-2 { color: #00c2ff; font-size: 20px; text-shadow: 0 0 10px #00c2ff; }
-.rank-badge.rank-3 { color: #ffc107; font-size: 20px; text-shadow: 0 0 10px #ffc107; }
+.rank-badge.rank-2 {
+  color: #00c2ff;
+  font-size: 20px;
+  text-shadow: 0 0 10px #00c2ff;
+}
+.rank-badge.rank-3 {
+  color: #ffc107;
+  font-size: 20px;
+  text-shadow: 0 0 10px #ffc107;
+}
 
 .anime-item .thumb {
-    width: 70px;
-    height: 90px;
-    border-radius: 8px;
-    object-fit: cover;
+  width: 70px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .item-info {
-    flex: 1;
+  flex: 1;
 }
 
 .item-info h4 {
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #fff;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #fff;
 }
 
 .item-info span {
-    font-size: 12px;
-    color: #888;
+  font-size: 12px;
+  color: #888;
 }
 
 .btn-add {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 1px solid #444;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    font-size: 18px;
-    margin-right: 10px;
-    transition: 0.2s;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #444;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: 0.2s;
 }
 .btn-add:hover {
-    border-color: var(--primary);
-    color: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 /* Hiệu ứng khi item được chọn */
 .anime-item.active {
-    background: #333;
-    border-left: 3px solid var(--primary); /* Viền hồng */
-    box-shadow: 0 0 15px #bb8839(255, 0, 106, 0.2);
+  background: #333;
+  border-left: 3px solid var(--primary); /* Viền hồng */
+  box-shadow: 0 0 15px #bb8839(255, 0, 106, 0.2);
 }
 
 .anime-item.active h4 {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 /* Thêm con trỏ chuột để biết là bấm được */
 .anime-item {
-    cursor: pointer; 
+  cursor: pointer;
 }
 /* RESPONSIVE CHO MOBILE */
 @media (max-width: 900px) {
-    .anime-leaderboard {
-        flex-direction: column;
-    }
-    .anime-king {
-        height: 350px;
-    }
-    .king-info h2 {
-        font-size: 24px;
-    }
-    .king-info .desc {
-        max-width: 100%;
-    }
+  .anime-leaderboard {
+    flex-direction: column;
+  }
+  .anime-king {
+    height: 350px;
+  }
+  .king-info h2 {
+    font-size: 24px;
+  }
+  .king-info .desc {
+    max-width: 100%;
+  }
 }
 /* --- MOVIE INFO PANEL (Bảng thông tin bên dưới) --- */
 
@@ -1089,7 +1103,6 @@ body {
   opacity: 0; /* Mặc định ẩn, JS sẽ hiện lên */
   transform: translateY(20px);
 }
-
 
 .movie-info-panel.show {
   opacity: 1;
@@ -2150,140 +2163,139 @@ body {
 }
 /* --- RESPONSIVE MOBILE (Dưới 768px) --- */
 @media (max-width: 768px) {
+  /* 1. XỬ LÝ THANH SKEW (Cho lướt ngang) */
+  .skew-wrapper {
+    justify-content: flex-start; /* Căn trái để lướt được */
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    padding-left: 15px; /* Cách lề trái một chút */
+    padding-bottom: 15px; /* Tránh bị cắt bóng đổ */
 
-    /* 1. XỬ LÝ THANH SKEW (Cho lướt ngang) */
-    .skew-wrapper {
-        justify-content: flex-start; /* Căn trái để lướt được */
-        overflow-x: auto; /* Cho phép cuộn ngang */
-        padding-left: 15px; /* Cách lề trái một chút */
-        padding-bottom: 15px; /* Tránh bị cắt bóng đổ */
-        
-        /* Ẩn thanh cuộn cho đẹp */
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-    }
-    
-    .skew-wrapper::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
-    }
+    /* Ẩn thanh cuộn cho đẹp */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 
-    .skew-card {
-        flex-shrink: 0; /* Không cho card bị co nhỏ lại */
-        width: 160px; /* Thu nhỏ kích thước card chút cho vừa mắt mobile */
-        height: 100px;
-    }
+  .skew-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 
-    /* 2. XỬ LÝ BẢNG THÔNG TIN (Xếp dọc) */
-    .panel-content {
-        flex-direction: column; /* Xếp theo chiều dọc */
-        padding: 20px; /* Giảm padding */
-        text-align: center; /* Căn giữa nội dung */
-    }
+  .skew-card {
+    flex-shrink: 0; /* Không cho card bị co nhỏ lại */
+    width: 160px; /* Thu nhỏ kích thước card chút cho vừa mắt mobile */
+    height: 100px;
+  }
 
-    /* Đảo vị trí: Ảnh lên trên, Chữ xuống dưới (nếu muốn) */
-    /* Hoặc giữ nguyên thì ảnh sẽ nằm dưới cùng. 
+  /* 2. XỬ LÝ BẢNG THÔNG TIN (Xếp dọc) */
+  .panel-content {
+    flex-direction: column; /* Xếp theo chiều dọc */
+    padding: 20px; /* Giảm padding */
+    text-align: center; /* Căn giữa nội dung */
+  }
+
+  /* Đảo vị trí: Ảnh lên trên, Chữ xuống dưới (nếu muốn) */
+  /* Hoặc giữ nguyên thì ảnh sẽ nằm dưới cùng. 
        Dưới đây là code để đẩy ảnh lên đầu cho đẹp: */
-    .panel-content {
-        flex-direction: column-reverse; 
-    }
+  .panel-content {
+    flex-direction: column-reverse;
+  }
 
-    /* Chỉnh phần chữ */
-    .panel-text {
-        width: 100%;
-    }
+  /* Chỉnh phần chữ */
+  .panel-text {
+    width: 100%;
+  }
 
-    .panel-text h2 {
-        font-size: 24px; /* Giảm cỡ chữ tiêu đề */
-        margin-top: 15px;
-    }
+  .panel-text h2 {
+    font-size: 24px; /* Giảm cỡ chữ tiêu đề */
+    margin-top: 15px;
+  }
 
-    .panel-text p {
-        font-size: 13px; /* Giảm cỡ chữ mô tả */
-        line-height: 1.5;
-        display: -webkit-box;
-        -webkit-line-clamp: 4; /* Giới hạn 4 dòng nếu dài quá */
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
+  .panel-text p {
+    font-size: 13px; /* Giảm cỡ chữ mô tả */
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Giới hạn 4 dòng nếu dài quá */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 
-    .panel-meta {
-        justify-content: center; /* Căn giữa các thẻ tag */
-        flex-wrap: wrap; /* Xuống dòng nếu màn hình quá bé */
-        gap: 8px;
-    }
-    
-    .panel-actions {
-        justify-content: center; /* Căn giữa nút bấm */
-    }
+  .panel-meta {
+    justify-content: center; /* Căn giữa các thẻ tag */
+    flex-wrap: wrap; /* Xuống dòng nếu màn hình quá bé */
+    gap: 8px;
+  }
 
-    /* Chỉnh phần Ảnh Poster */
-    .panel-poster {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
+  .panel-actions {
+    justify-content: center; /* Căn giữa nút bấm */
+  }
 
-    .panel-poster img {
-        max-height: 180px; /* Thu nhỏ chiều cao ảnh */
-        transform: rotate(0deg); /* Bỏ nghiêng ảnh để tiết kiệm diện tích */
-        border-width: 2px;
-    }
+  /* Chỉnh phần Ảnh Poster */
+  .panel-poster {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 
-    /* Chỉnh Video nền cho Mobile */
-    .video-background iframe {
-        transform: translate(-50%, -50%) scale(3); /* Zoom video to hơn trên mobile để lấp đầy chiều dọc */
-    }
+  .panel-poster img {
+    max-height: 180px; /* Thu nhỏ chiều cao ảnh */
+    transform: rotate(0deg); /* Bỏ nghiêng ảnh để tiết kiệm diện tích */
+    border-width: 2px;
+  }
+
+  /* Chỉnh Video nền cho Mobile */
+  .video-background iframe {
+    transform: translate(-50%, -50%) scale(3); /* Zoom video to hơn trên mobile để lấp đầy chiều dọc */
+  }
 }
 /* --- RESPONSIVE CHO BXH ANIME (Mobile & Tablet) --- */
 @media (max-width: 1024px) {
-    /* 1. Chuyển từ xếp ngang sang xếp dọc */
-    .anime-leaderboard {
-        flex-direction: column; /* Video lên trên, list xuống dưới */
-        height: auto;
-        padding: 0 15px; /* Thêm lề 2 bên cho không sát mép màn hình */
-    }
+  /* 1. Chuyển từ xếp ngang sang xếp dọc */
+  .anime-leaderboard {
+    flex-direction: column; /* Video lên trên, list xuống dưới */
+    height: auto;
+    padding: 0 15px; /* Thêm lề 2 bên cho không sát mép màn hình */
+  }
 
-    /* 2. Chỉnh khung Video (King) to hết cỡ ngang */
-    .anime-king {
-        flex: none;       /* Hủy bỏ thông số 55% của PC */
-        width: 100%;      /* Rộng full màn hình */
-        height: 250px;    /* Giảm chiều cao xuống (PC là 450px) */
-        margin-bottom: 20px;
-    }
+  /* 2. Chỉnh khung Video (King) to hết cỡ ngang */
+  .anime-king {
+    flex: none; /* Hủy bỏ thông số 55% của PC */
+    width: 100%; /* Rộng full màn hình */
+    height: 250px; /* Giảm chiều cao xuống (PC là 450px) */
+    margin-bottom: 20px;
+  }
 
-    /* 3. Chỉnh danh sách bên dưới */
-    .anime-list-vertical {
-        flex: none;
-        width: 100%;      /* Rộng full màn hình */
-        padding-bottom: 20px;
-    }
+  /* 3. Chỉnh danh sách bên dưới */
+  .anime-list-vertical {
+    flex: none;
+    width: 100%; /* Rộng full màn hình */
+    padding-bottom: 20px;
+  }
 
-    /* 4. Chỉnh chữ nhỏ lại cho vừa điện thoại */
-    .king-info {
-        padding: 15px; /* Giảm padding */
-    }
+  /* 4. Chỉnh chữ nhỏ lại cho vừa điện thoại */
+  .king-info {
+    padding: 15px; /* Giảm padding */
+  }
 
-    .king-info h2 {
-        font-size: 20px; /* Tên phim nhỏ lại */
-        margin-bottom: 5px;
-    }
+  .king-info h2 {
+    font-size: 20px; /* Tên phim nhỏ lại */
+    margin-bottom: 5px;
+  }
 
-    .king-info .desc {
-        -webkit-line-clamp: 2; /* Chỉ hiện 2 dòng mô tả thôi */
-        font-size: 13px;
-        margin-bottom: 10px;
-    }
-    
-    .king-badge {
-        font-size: 14px;
-        padding: 5px 10px;
-        top: 10px;
-        left: 10px;
-    }
+  .king-info .desc {
+    -webkit-line-clamp: 2; /* Chỉ hiện 2 dòng mô tả thôi */
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
 
-    /* 5. Ẩn nút xem ngay nếu muốn màn hình thoáng hơn (Tuỳ chọn) */
-    /* .btn-watch { display: none; } */
+  .king-badge {
+    font-size: 14px;
+    padding: 5px 10px;
+    top: 10px;
+    left: 10px;
+  }
+
+  /* 5. Ẩn nút xem ngay nếu muốn màn hình thoáng hơn (Tuỳ chọn) */
+  /* .btn-watch { display: none; } */
 }
 /* =========================================
    RESPONSIVE CHO TRANG chonPhim.html
@@ -2312,7 +2324,7 @@ body {
   .sidebar img {
     width: 220px; /* Tăng kích thước poster nhìn cho rõ */
     height: auto; /* Tự động chỉnh chiều cao theo tỷ lệ */
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
   }
 
@@ -2322,7 +2334,7 @@ body {
   }
 
   /* Căn giữa các thẻ tag (IMDB, tuổi, thể loại) */
-  .info-list, 
+  .info-list,
   .genre-list {
     justify-content: center;
     margin-bottom: 15px;
@@ -2357,7 +2369,7 @@ body {
     width: 100%;
     border-radius: 50px; /* Bo tròn mạnh hơn */
   }
-  
+
   .control-bar .control-bar-1 a {
     display: flex;
     align-items: center;
@@ -2380,7 +2392,7 @@ body {
     align-items: center;
     font-size: 12px;
   }
-  
+
   .control-bar .control-bar-2 a div {
     font-size: 20px; /* Icon to lên */
     margin-bottom: 5px;
@@ -2393,7 +2405,7 @@ body {
     overflow-x: auto; /* Cho phép lướt ngang nếu menu dài */
     white-space: nowrap;
   }
-  
+
   .tabs-navigation a {
     padding: 10px;
     font-size: 14px;
