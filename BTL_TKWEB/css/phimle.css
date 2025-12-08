@@ -1,0 +1,354 @@
+/* phim lẻ */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.movie-item {
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+}
+
+.movie-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movie-item h4 {
+  margin: 8px 0 0 0;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.movie-info1 {
+  font-size: 14px;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.page-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #2c2f3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.page-btn:hover {
+  background: #3c3f4a;
+}
+
+.page-center {
+  background: #2c2f3a;
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-text,
+.page-total {
+  color: white;
+  font-size: 16px;
+}
+
+.page-input {
+  width: 60px;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #484c57;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.page-input::-webkit-inner-spin-button,
+.page-input::-webkit-outer-spin-button {
+}
+/*  */
+.movie-item {
+  position: relative;
+  width: 200px;
+  cursor: pointer;
+}
+
+.movie-img {
+  text-align: center;
+}
+.movie-img img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* .movie-img span {
+  font-size: 14px;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  min-width: 0;
+} */
+
+.movie-item:hover .movie-img img {
+  transform: scale(1.05);
+}
+
+/* POPUP HOVER */
+.movie-hover {
+  position: absolute;
+  top: -10px;
+  left: -60px;
+  width: 400px;
+  background: #1a1c25;
+  border-radius: 16px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: 0.25s ease;
+  z-index: 99;
+}
+
+.movie-item:hover .movie-hover {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Background ảnh trong popup */
+.movie-hover .hover-bg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* Nội dung */
+.hover-content {
+  padding: 15px 20px;
+  color: #fff;
+}
+
+.hover-content h3 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.hover-content .sub {
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.action-btns {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn.yellow {
+  background: #ffcf40;
+  color: black;
+  text-decoration: none;
+}
+
+/* Tags */
+.tag {
+  font-size: 12px;
+  background: #2d313d;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-right: 6px;
+}
+
+.tag.imdb {
+  background: #e0b23c;
+  color: #000;
+}
+
+.tag.age {
+  background: #fff;
+  color: #000;
+}
+
+.genres {
+  opacity: 0.75;
+  margin-top: 10px;
+}
+/* --- RESPONSIVE MOBILE (Dưới 768px) --- */
+@media (max-width: 768px) {
+  /* 1. XỬ LÝ THANH SKEW (Cho lướt ngang) */
+  .skew-wrapper {
+    justify-content: flex-start; /* Căn trái để lướt được */
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    padding-left: 15px; /* Cách lề trái một chút */
+    padding-bottom: 15px; /* Tránh bị cắt bóng đổ */
+
+    /* Ẩn thanh cuộn cho đẹp */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .skew-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .skew-card {
+    flex-shrink: 0; /* Không cho card bị co nhỏ lại */
+    width: 160px; /* Thu nhỏ kích thước card chút cho vừa mắt mobile */
+    height: 100px;
+  }
+
+  /* 2. XỬ LÝ BẢNG THÔNG TIN (Xếp dọc) */
+  .panel-content {
+    flex-direction: column; /* Xếp theo chiều dọc */
+    padding: 20px; /* Giảm padding */
+    text-align: center; /* Căn giữa nội dung */
+  }
+
+  /* Đảo vị trí: Ảnh lên trên, Chữ xuống dưới (nếu muốn) */
+  /* Hoặc giữ nguyên thì ảnh sẽ nằm dưới cùng. 
+       Dưới đây là code để đẩy ảnh lên đầu cho đẹp: */
+  .panel-content {
+    flex-direction: column-reverse;
+  }
+
+  /* Chỉnh phần chữ */
+  .panel-text {
+    width: 100%;
+  }
+
+  .panel-text h2 {
+    font-size: 24px; /* Giảm cỡ chữ tiêu đề */
+    margin-top: 15px;
+  }
+
+  .panel-text p {
+    font-size: 13px; /* Giảm cỡ chữ mô tả */
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Giới hạn 4 dòng nếu dài quá */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .panel-meta {
+    justify-content: center; /* Căn giữa các thẻ tag */
+    flex-wrap: wrap; /* Xuống dòng nếu màn hình quá bé */
+    gap: 8px;
+  }
+
+  .panel-actions {
+    justify-content: center; /* Căn giữa nút bấm */
+  }
+
+  /* Chỉnh phần Ảnh Poster */
+  .panel-poster {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .panel-poster img {
+    max-height: 180px; /* Thu nhỏ chiều cao ảnh */
+    transform: rotate(0deg); /* Bỏ nghiêng ảnh để tiết kiệm diện tích */
+    border-width: 2px;
+  }
+
+  /* Chỉnh Video nền cho Mobile */
+  .video-background iframe {
+    transform: translate(-50%, -50%) scale(3); /* Zoom video to hơn trên mobile để lấp đầy chiều dọc */
+  }
+}
+/* --- RESPONSIVE CHO BXH ANIME (Mobile & Tablet) --- */
+@media (max-width: 1024px) {
+  /* 1. Chuyển từ xếp ngang sang xếp dọc */
+  .anime-leaderboard {
+    flex-direction: column; /* Video lên trên, list xuống dưới */
+    height: auto;
+    padding: 0 15px; /* Thêm lề 2 bên cho không sát mép màn hình */
+  }
+
+  /* 2. Chỉnh khung Video (King) to hết cỡ ngang */
+  .anime-king {
+    flex: none; /* Hủy bỏ thông số 55% của PC */
+    width: 100%; /* Rộng full màn hình */
+    height: 250px; /* Giảm chiều cao xuống (PC là 450px) */
+    margin-bottom: 20px;
+  }
+
+  /* 3. Chỉnh danh sách bên dưới */
+  .anime-list-vertical {
+    flex: none;
+    width: 100%; /* Rộng full màn hình */
+    padding-bottom: 20px;
+  }
+
+  /* 4. Chỉnh chữ nhỏ lại cho vừa điện thoại */
+  .king-info {
+    padding: 15px; /* Giảm padding */
+  }
+
+  .king-info h2 {
+    font-size: 20px; /* Tên phim nhỏ lại */
+    margin-bottom: 5px;
+  }
+
+  .king-info .desc {
+    -webkit-line-clamp: 2; /* Chỉ hiện 2 dòng mô tả thôi */
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .king-badge {
+    font-size: 14px;
+    padding: 5px 10px;
+    top: 10px;
+    left: 10px;
+  }
+}
