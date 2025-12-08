@@ -1171,6 +1171,7 @@ body {
 }
 
 .panel-text h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 36px;
   font-weight: 800;
   text-transform: uppercase;
