@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên Hệ - CINEMOUNT</title>
+    
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/lienhe.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img
+          src="images/logo.png"
+          alt="Movies Bazer"
+          style="
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+          "
+        />
+        <a style="text-decoration: none; color: white" href="home.html">
+          <span>CINEMOUNT</span>
+        </a>
+      </div>
+
+      <!-- Nút mobile -->
+      <div class="menu-btn" id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- NAV -->
+      <nav class="nav" id="nav">
+        <a href="home.html">Trang chủ</a>
+        <a href="phimLe.html">Phim lẻ</a>
+        <a href="phimbo.html">Phim bộ</a>
+        <a href="lienhe.html" class="active">Liên hệ</a>
+     
+      </nav>
+
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const nav = document.getElementById("nav");
+
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          nav.classList.toggle("active");
+        });
+      </script>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Liên hệ</h1>
+
+        <p class="intro-text">
+            Chào mừng bạn đến với trang <strong>Liên Hệ</strong> của CINEMOUNT! Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn để mang lại trải nghiệm tốt nhất khi sử dụng dịch vụ. Nếu có bất kỳ câu hỏi, góp ý, hoặc yêu cầu hỗ trợ nào, hãy liên hệ với chúng tôi qua các thông tin dưới đây.
+        </p>
+
+        <div class="content-block">
+            <h2 class="section-title">1. Thông Tin Liên Hệ Chính</h2>
+            <div class="contact-info">
+                <p>Email hỗ trợ khách hàng: <a href="mailto:lienhe@cinemount.com" class="contact-email">lienhe@cinemount.com</a></p>
+                <ul class="contact-list">
+                    <li><span class="highlight">Vấn đề tài khoản:</span> Quên mật khẩu, không thể truy cập, và các vấn đề liên quan đến tài khoản.</li>
+                    <li><span class="highlight">Hỗ trợ kỹ thuật:</span> Sự cố khi xem phim, chất lượng video hoặc các lỗi khác khi sử dụng trang web.</li>
+                    <li><span class="highlight">Đóng góp ý kiến:</span> Chúng tôi trân trọng mọi ý kiến đóng góp từ bạn để nâng cao chất lượng dịch vụ.</li>
+                </ul>
+                
+                <p>Email liên hệ về Chính Sách Riêng Tư: <a href="mailto:privacy@cinemount.com" class="contact-email">privacy@cinemount.com</a></p>
+                <p>Mọi thắc mắc liên quan đến bảo mật thông tin và chính sách riêng tư của CINEMOUNT.</p>
+            </div>
+
+            <h2 class="section-title">2. Liên Hệ Qua Mạng Xã Hội</h2>
+            <p>Ngoài email, bạn cũng có thể liên hệ và cập nhật thông tin mới nhất từ CINEMOUNT qua các kênh mạng xã hội của chúng tôi:</p>
+            
+            <div class="social-buttons">
+                <a href="#" class="btn-social">
+                    <i class="fab fa-telegram-plane"></i> Telegram: https://t.me/congdongcinemount
+                </a>
+                <a href="#" class="btn-social">
+                    <i class="fab fa-discord"></i> Discord: https://discord.gg/cinemount
+                </a>
+                <a href="#" class="btn-social">
+                    <i class="fab fa-facebook"></i> Facebook: https://www.facebook.com/cinemount
+                </a>
+                <a href="#" class="btn-social">
+                    <i class="fab fa-instagram"></i> Instagram: https://www.instagram.com/cinemount
+                </a>
+                <a href="#" class="btn-social">
+                    <i class="fab fa-x-twitter"></i> X: https://x.com/cinemount
+                </a>
+            </div>
+
+            <h2 class="section-title">3. Câu Hỏi Thường Gặp (F.A.Q)</h2>
+            <div class="contact-info">
+                <p>Trước khi gửi yêu cầu hỗ trợ, bạn có thể tham khảo trang <span class="highlight">Câu Hỏi Thường Gặp (F.A.Q)</span> để tìm câu trả lời nhanh cho các vấn đề phổ biến nhất tại <span class="highlight">F.A.Q - CINEMOUNT</span>.</p>
+                <br>
+                <p>Chúng tôi rất vui khi được hỗ trợ bạn và mong muốn mang đến trải nghiệm xem phim trực tuyến tốt nhất!</p>
+                <p class="highlight">CINEMOUNT - Cùng bạn khám phá thế giới giải trí đa dạng, an toàn và miễn phí!</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+     <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="./images/logo.png" alt="Cinemount Logo" />
+          <div>
+            <h2>CINEMOUNT</h2>
+            <p>Trang phim được dựng bởi 5 thằng ngu</p>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <span>➡️</span>
+          <span>🎮</span>
+          <span>💬</span>
+          <span>❌</span>
+          <span>📘</span>
+          <span>🎵</span>
+          <span>📺</span>
+          <span>📸</span>
+          <span>🖼️</span>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Hỏi-Đáp</a>
+        <a href="#">Chính sách bảo mật</a>
+        <a href="#">Điều khoản sử dụng</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Liên hệ</a>
+      </div>
+
+      <div class="footer-tags">
+        <a href="#">Dongphim</a>
+        <a href="#">Ghenphim</a>
+        <a href="#">Motphim</a>
+        <a href="#">Subnhanh</a>
+      </div>
+
+      <p class="footer-desc">
+        Cinemount – Trang xem phim online chất lượng cao miễn phí Vietsub,
+        thuyết minh, lồng tiếng full HD. Kho phim mới cập nhật liên tục với
+        nhiều thể loại...
+      </p>
+
+      <p class="footer-copy">© 2024 Cinemount</p>
+    </footer>
+  </body>
+</html>
