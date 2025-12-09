@@ -253,3 +253,59 @@
     grid-template-columns: repeat(2, 1.5fr);
   }
 }
+/* --- RESPONSIVE CHO MÀN HÌNH < 400PX --- */
+@media (max-width: 414px) {
+  section.section {
+    padding: 0 5px !important; /* Chỉ để hở 5px mỗi bên */
+  }
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 8px; /* Khoảng cách giữa các ô giảm xuống 8px */
+    justify-items: center;
+  }
+  .movie-item {
+    width: 100% !important; /* Xóa bỏ width 200px cũ */
+    height: auto !important; 
+    padding: 0; /* Bỏ padding trong thẻ để ảnh to nhất có thể */
+    background: transparent; /* Bỏ màu nền đen nếu muốn thoáng hơn */
+  }
+  .movie-item img {
+    width: 100%;
+    height: 150px !important; /* Chiều cao phù hợp màn hình nhỏ */
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  .movie-hover {
+    display: none !important;
+  }
+  .movie-item h4 {
+    font-size: 12px; /* Chữ nhỏ lại 1 chút */
+    margin: 5px 2px 0 2px;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Cắt bớt nếu tên quá dài */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.3;
+  }
+  .movie-info1 {
+    display: none; 
+  }
+  .pagination {
+    gap: 5px;
+    margin-top: 20px;
+  }
+  .page-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .page-center {
+    padding: 5px 8px;
+  }
+  .page-input {
+    width: 30px;
+    font-size: 12px;
+  }
+}
