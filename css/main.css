@@ -19,6 +19,7 @@ body {
   background: var(--bg);
   color: var(--text);
   padding: 0 40px;
+  overflow-x: hidden;
 }
 
 /* HEADER */
@@ -464,6 +465,7 @@ body {
   background-color: #181a1d; /* Màu nền tối */
   color: #e0e0e0; /* Màu chữ sáng */
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Container giới hạn chiều rộng nội dung */
@@ -1146,7 +1148,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
   /* Căn giữa video */
@@ -1667,6 +1669,7 @@ body {
   body {
     padding: 0 20px;
     margin: auto;
+    overflow-x: hidden;
   }
 
   /* HEADER */
@@ -1683,8 +1686,16 @@ body {
       padding: 40px 20px;
       gap: 25px;
       transition: 0.4s ease;
+      
     }
-
+.movie-hover {
+        display: none !important;
+}
+section.section {
+    padding: 0 15px !important;
+    width: 100%;
+    overflow: hidden; /* Cắt phần thừa nếu có */
+  }
     /* Khi active thì hiện menu */
     .nav.active {
       right: 0;
@@ -1813,6 +1824,7 @@ body {
 @media (min-width: 769px) and (max-width: 1024px) {
   body {
     padding: 0 30px;
+    overflow-x: hidden;
   }
   button.btn {
     left: 0;
