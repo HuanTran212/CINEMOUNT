@@ -120,7 +120,7 @@ const animeRankData = [
         id: 0,
         rank: 1,
         rankLabel: "🏆 TOP 1",
-        title: "Attack on Titan: Trận chiến cuối cùng",
+        title: "Attack on Titan",
         shortTitle: "Attack on Titan",
         views: "🔥 3.5M Views",
         rating: "⭐ 9.8",
