@@ -67,6 +67,15 @@
         <a href="phimbo.html">Phim Bộ</a>
         <a href="lienhe.html">Liên hệ</a>
       </nav>
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const nav = document.getElementById("nav");
+
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          nav.classList.toggle("active");
+        });
+      </script>
     </header>
 
     <main id="movie-main">

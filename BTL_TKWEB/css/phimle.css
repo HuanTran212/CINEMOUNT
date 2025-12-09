@@ -1,7 +1,5 @@
-/* phim lẻ */
 .movie-list {
   display: grid;
-  /* Grid sẽ tự điều chỉnh số cột và chiều rộng của mỗi item */
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 20px;
 }
@@ -12,8 +10,7 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  /* Đã sửa: Xóa chiều cao cố định để nội dung tự co dãn */
-  height: auto;
+  height: 360px;
 }
 
 .movie-item img {
@@ -98,13 +95,11 @@
 
 .page-input::-webkit-inner-spin-button,
 .page-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
-/* */
+/*  */
 .movie-item {
   position: relative;
-  /* Đã sửa: Xóa width: 200px cố định để dùng width của Grid */
+  width: 200px;
   cursor: pointer;
 }
 
@@ -116,6 +111,16 @@
   border-radius: 12px;
   transition: transform 0.3s ease;
 }
+
+/* .movie-img span {
+  font-size: 14px;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  min-width: 0;
+} */
 
 .movie-item:hover .movie-img img {
   transform: scale(1.05);
@@ -213,21 +218,94 @@
   opacity: 0.75;
   margin-top: 10px;
 }
+/* --- RESPONSIVE MOBILE (Dưới 768px) --- */
+@media (max-width: 768px) {
+  /* 1. XỬ LÝ THANH SKEW (Cho lướt ngang) */
+  .skew-wrapper {
+    justify-content: flex-start; /* Căn trái để lướt được */
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    padding-left: 15px; /* Cách lề trái một chút */
+    padding-bottom: 15px; /* Tránh bị cắt bóng đổ */
 
-/* --- FIX POPUP HOVER VÀ BXH ANIME (Mobile & Tablet) --- */
+    /* Ẩn thanh cuộn cho đẹp */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .skew-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .skew-card {
+    flex-shrink: 0; /* Không cho card bị co nhỏ lại */
+    width: 160px; /* Thu nhỏ kích thước card chút cho vừa mắt mobile */
+    height: 100px;
+  }
+
+  /* 2. XỬ LÝ BẢNG THÔNG TIN (Xếp dọc) */
+  .panel-content {
+    flex-direction: column; /* Xếp theo chiều dọc */
+    padding: 20px; /* Giảm padding */
+    text-align: center; /* Căn giữa nội dung */
+  }
+
+  /* Đảo vị trí: Ảnh lên trên, Chữ xuống dưới (nếu muốn) */
+  /* Hoặc giữ nguyên thì ảnh sẽ nằm dưới cùng. 
+       Dưới đây là code để đẩy ảnh lên đầu cho đẹp: */
+  .panel-content {
+    flex-direction: column-reverse;
+  }
+
+  /* Chỉnh phần chữ */
+  .panel-text {
+    width: 100%;
+  }
+
+  .panel-text h2 {
+    font-size: 24px; /* Giảm cỡ chữ tiêu đề */
+    margin-top: 15px;
+  }
+
+  .panel-text p {
+    font-size: 13px; /* Giảm cỡ chữ mô tả */
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Giới hạn 4 dòng nếu dài quá */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .panel-meta {
+    justify-content: center; /* Căn giữa các thẻ tag */
+    flex-wrap: wrap; /* Xuống dòng nếu màn hình quá bé */
+    gap: 8px;
+  }
+
+  .panel-actions {
+    justify-content: center; /* Căn giữa nút bấm */
+  }
+
+  /* Chỉnh phần Ảnh Poster */
+  .panel-poster {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .panel-poster img {
+    max-height: 180px; /* Thu nhỏ chiều cao ảnh */
+    transform: rotate(0deg); /* Bỏ nghiêng ảnh để tiết kiệm diện tích */
+    border-width: 2px;
+  }
+
+  /* Chỉnh Video nền cho Mobile */
+  .video-background iframe {
+    transform: translate(-50%, -50%) scale(3); /* Zoom video to hơn trên mobile để lấp đầy chiều dọc */
+  }
+}
+/* --- RESPONSIVE CHO BXH ANIME (Mobile & Tablet) --- */
 @media (max-width: 1024px) {
-  /* FIX: Ẩn Popup Hover trên Tablet/Mobile */
-  .movie-item:hover .movie-img img {
-    /* Bỏ hiệu ứng scale khi tap/hover trên thiết bị cảm ứng */
-    transform: scale(1);
-  }
-
-  .movie-hover {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-
   /* 1. Chuyển từ xếp ngang sang xếp dọc */
   .anime-leaderboard {
     flex-direction: column; /* Video lên trên, list xuống dưới */
@@ -237,31 +315,31 @@
 
   /* 2. Chỉnh khung Video (King) to hết cỡ ngang */
   .anime-king {
-    flex: none;
-    width: 100%;
-    height: 250px;
+    flex: none; /* Hủy bỏ thông số 55% của PC */
+    width: 100%; /* Rộng full màn hình */
+    height: 250px; /* Giảm chiều cao xuống (PC là 450px) */
     margin-bottom: 20px;
   }
 
   /* 3. Chỉnh danh sách bên dưới */
   .anime-list-vertical {
     flex: none;
-    width: 100%;
+    width: 100%; /* Rộng full màn hình */
     padding-bottom: 20px;
   }
 
-  /* 4. Chỉnh chữ nhỏ lại cho vừa tablet */
+  /* 4. Chỉnh chữ nhỏ lại cho vừa điện thoại */
   .king-info {
-    padding: 15px;
+    padding: 15px; /* Giảm padding */
   }
 
   .king-info h2 {
-    font-size: 20px;
+    font-size: 20px; /* Tên phim nhỏ lại */
     margin-bottom: 5px;
   }
 
   .king-info .desc {
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 2; /* Chỉ hiện 2 dòng mô tả thôi */
     font-size: 13px;
     margin-bottom: 10px;
   }
@@ -273,143 +351,9 @@
     left: 10px;
   }
 }
-
-/* --- RESPONSIVE MOBILE (Dưới 768px) --- */
-@media (max-width: 768px) {
-  /* Bổ sung fix cho list phim trên Tablet/Mobile ngang */
-  .movie-list {
-    /* Cho phép item co nhỏ hơn (min 150px) */
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-  }
-
-  .movie-item img {
-    /* Giảm chiều cao ảnh nếu cần thiết */
-    height: 220px;
-  }
-
-  /* Tối ưu Thanh Phân Trang */
-  .pagination {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .page-center {
-    flex-wrap: wrap;
-    padding: 8px 15px;
-  }
-
-  .page-input {
-    width: 40px;
-    font-size: 14px;
-  }
-
-  .page-btn {
-    width: 40px;
-    height: 40px;
-  }
-
-  /* 1. XỬ LÝ THANH SKEW (Cho lướt ngang) */
-  .skew-wrapper {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-left: 15px;
-    padding-bottom: 15px;
-
-    /* Ẩn thanh cuộn */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .skew-wrapper::-webkit-scrollbar {
-    display: none;
-  }
-
-  .skew-card {
-    flex-shrink: 0;
-    width: 160px;
-    height: 100px;
-  }
-
-  /* 2. XỬ LÝ BẢNG THÔNG TIN (Xếp dọc) */
-  .panel-content {
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .panel-content {
-    flex-direction: column-reverse;
-  }
-
-  .panel-text {
-    width: 100%;
-  }
-
-  .panel-text h2 {
-    font-size: 24px;
-    margin-top: 15px;
-  }
-
-  .panel-text p {
-    font-size: 13px;
-    line-height: 1.5;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .panel-meta {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .panel-actions {
-    justify-content: center;
-  }
-
-  .panel-poster {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  .panel-poster img {
-    max-height: 180px;
-    transform: rotate(0deg);
-    border-width: 2px;
-  }
-
-  .video-background iframe {
-    transform: translate(-50%, -50%) scale(3);
-  }
+.section {
+  margin-left: 40px;
 }
-
-/* --- RESPONSIVE MOBILE CỰC NHỎ (Dưới 576px) --- */
-@media (max-width: 576px) {
-  .movie-list {
-    /* Giảm kích thước tối thiểu của item phim trên điện thoại nhỏ */
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 10px;
-  }
-
-  .movie-item {
-    padding: 5px;
-  }
-
-  .movie-item img {
-    height: 180px; /* Giảm chiều cao ảnh trên màn hình nhỏ hơn */
-  }
-
-  .movie-item h4 {
-    font-size: 14px;
-    margin-top: 5px;
-  }
-
-  .movie-info1 {
-    font-size: 12px;
-  }
+.section-header h3 {
+  margin-left: -100px;
 }
