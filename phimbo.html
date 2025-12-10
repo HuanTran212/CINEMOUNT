@@ -77,33 +77,7 @@
       </script>
     </header>
 
-    <section class="hero" style="filter: brightness(1.8)">
-      <video
-        class="hero-video"
-        src="./video/./phimbotrailer.mp4"
-        muted
-        loop
-        autoplay
-        playsinline
-      ></video>
-
-      <div class="overlay-2"></div>
-
-      <script>
-        const videoss = document.querySelectorAll(".hero video");
-        videoss.forEach((video) => {
-          video.muted = true;
-          video.autoplay = true;
-          video.loop = true;
-          video.play().catch(() => {
-            console.log("Autoplay bị chặn, thử lại...");
-            setTimeout(() => video.play(), 500);
-          });
-        });
-      </script>
-    </section>
-
-    <section class="section" , style="padding: 0 70px">
+    <section class="section" style="padding: 0 70px">
       <div class="section-header">
         <h3>Phim Bộ</h3>
       </div>
@@ -119,20 +93,16 @@
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/parker.jpg" />
+            <img class="hover-bg" src="./images/phimle/parker-2.jpg" />
 
             <div class="hover-content">
               <h3>Tony Parker: Cú Ném Cuối Cùng</h3>
               <p class="sub">Tony Parker: The Final Shot</p>
 
               <div class="action-btns">
-                <a href="xp-parker.html" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-parker.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="cp-parker.html" style="text-decoration: none"
-                  ><button class="btn">ⓘ Chi tiết</button></a
-                >
+                <a href="cp-parker.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -157,20 +127,16 @@
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/heroes.jpg" />
+            <img class="hover-bg" src="./images/phimle/heroes-2.jpg" />
 
             <div class="hover-content">
               <h3>Cùng Làm Anh Hùng</h3>
               <p class="sub">We Can Be Heroes</p>
 
               <div class="action-btns">
-                <a href="xp-heroes.html" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-heroes.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="cp-heroes.html"
-                  ><button class="btn">ⓘ Chi tiết</button></a
-                >
+                <a href="cp-heroes.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -204,13 +170,9 @@
               <p class="sub">Pokemon the Movie: Secrets of the Jungle</p>
 
               <div class="action-btns">
-                <a href="xp-pokemon.html" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-pokemon.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="cp-pokemon.html"
-                  ><button class="btn">ⓘ Chi tiết</button></a
-                >
+                <a href="cp-pokemon.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -242,13 +204,9 @@
               <p class="sub">The Croods: A New Age</p>
 
               <div class="action-btns">
-                <a href="xp-croods.html" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-croods.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="cp-croods.html"
-                  ><button class="btn">ⓘ Chi tiết</button></a
-                >
+                <a href="cp-croods.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -278,13 +236,9 @@
               <p class="sub">Guardian Of The Galaxy vol 3</p>
 
               <div class="action-btns">
-                <a href="xemPhim.html" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xemPhim.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="chonPhim.html"
-                  ><button class="btn">ⓘ Chi tiết</button></a
-                >
+                <a href="chonPhim.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -316,13 +270,9 @@
               <p class="sub">Kiniro Mosaic: Thank You!!</p>
 
               <div class="action-btns">
-                <a href="xp-kiniro.html" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-kiniro.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="cp-kiniro.html"
-                  ><button class="btn">ⓘ Chi tiết</button></a
-                >
+                <a href="cp-kiniro.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -356,13 +306,9 @@
               <p class="sub">Monster Hunter: Legends of the Guild</p>
 
               <div class="action-btns">
-                <a href="xp-legends.html" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-legends.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="cp-legends.html"
-                  ><button class="btn">ⓘ Chi tiết</button></a
-                >
+                <a href="cp-legends.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -392,13 +338,9 @@
               <p class="sub">Pil's Adventures</p>
 
               <div class="action-btns">
-                <a href="xp-pil.html" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-pil.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="cp-pil.html"
-                  ><button class="btn">ⓘ Chi tiết</button></a
-                >
+                <a href="cp-pil.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -415,7 +357,7 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/loki.jpg" />
+            <a href="cp-loki.html"><img src="./images/phimle/loki.jpg" /></a>
             <h4>Băng Đảng Loki</h4>
             <span class="movie-info1"
               >The Simpsons: The Good, the Bart, and the Loki</span
@@ -430,11 +372,9 @@
               <p class="sub">The Simpsons: The Good, the Bart, and the Loki</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-loki.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-loki.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -451,7 +391,7 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/elio.jpg" />
+            <a href="cp-elio.html"><img src="./images/phimle/elio.jpg" /></a>
             <h4>Elio: Cậu Bé Đến Từ Trái Đất</h4>
             <span class="movie-info1">Elio</span>
           </div>
@@ -464,11 +404,9 @@
               <p class="sub">Elio</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-elio.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-elio.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -484,24 +422,27 @@
         </div>
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/bangdangquaikiet2.jpg" />
+            <a href="cp-Bangdang.html"
+              ><img src="./images/phimle/bangdangquaikiet2.jpg"
+            /></a>
             <h4>Băng Đảng Quái Kiệt 2</h4>
             <span class="movie-info1">The Bad Guys 2</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/bangdangquaikiet2.jpg" />
+            <img
+              class="hover-bg"
+              src="./images/phimle/bangdangquaikiet2-2.jpg"
+            />
 
             <div class="hover-content">
               <h3>Băng Đảng Quái Kiệt 2</h3>
               <p class="sub">The Bad Guys 2</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-Bangdang.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-Bangdang.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -518,24 +459,24 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/batman.jpg" />
+            <a href="cp-batman.html"
+              ><img src="./images/phimle/batman.jpg"
+            /></a>
             <h4>Batman Aztec: Đế Chế Huyết Chiến</h4>
             <span class="movie-info1">Aztec Batman: Clash of Empires</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/batman.jpg" />
+            <img class="hover-bg" src="./images/phimle/batman-2.jpg" />
 
             <div class="hover-content">
               <h3>Batman Aztec: Đế Chế Huyết Chiến</h3>
               <p class="sub">Aztec Batman: Clash of Empires</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-batman.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-batman.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -552,7 +493,7 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/conan.jpg" />
+            <a href="cp-conan.html"><img src="./images/phimle/conan.jpg" /></a>
             <h4>Thám Tử Lừng Danh Conan Movie 28: Dư Ảnh của Độc Nhãn</h4>
             <span class="movie-info1"
               >Detective Conan Movie 28: One-Eyed Flashback</span
@@ -560,18 +501,16 @@
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/conan.jpg" />
+            <img class="hover-bg" src="./images/phimle/conan-2.jpg" />
 
             <div class="hover-content">
               <h3>Thám Tử Lừng Danh Conan Movie 28: Dư Ảnh của Độc Nhãn</h3>
               <p class="sub">Detective Conan Movie 28: One-Eyed Flashback</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-conan.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-conan.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -588,24 +527,24 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/superman.jpg" />
+            <a href="cp-superman.html"
+              ><img src="./images/phimle/superman.jpg"
+            /></a>
             <h4>Superman</h4>
             <span class="movie-info1">Superman</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/superman.jpg" />
+            <img class="hover-bg" src="./images/phimle/superman-2.jpg" />
 
             <div class="hover-content">
               <h3>Superman</h3>
               <p class="sub">Superman</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-superman.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-superman.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -622,24 +561,24 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/lactronganhsao.jpg" />
+            <a href="cp-starlight.html"
+              ><img src="./images/phimle/lactronganhsao.jpg"
+            /></a>
             <h4>Lạc Trong Ánh Sao</h4>
             <span class="movie-info1">Lost in Starlight</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/lactronganhsao.jpg" />
+            <img class="hover-bg" src="./images/phimle/lactronganhsao-2.jpg" />
 
             <div class="hover-content">
               <h3>Lạc Trong Ánh Sao</h3>
               <p class="sub">Lost in Starlight</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-starlight.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-starlight.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -656,7 +595,9 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/alexander.jpg" />
+            <a href="cp-alexander.html"
+              ><img src="./images/phimle/alexander.jpg"
+            /></a>
             <h4>
               Alexander và Chuyến Đi Kinh Khủng, Tồi Tệ, Bàng Hoàng Hoảng Hốt
             </h4>
@@ -667,7 +608,7 @@
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/alexander.jpg" />
+            <img class="hover-bg" src="./images/phimle/alexander-2.jpg" />
 
             <div class="hover-content">
               <h3>
@@ -679,11 +620,9 @@
               </p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-alexander.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-alexander.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -700,7 +639,9 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/doraemon.jpg" />
+            <a href="cp-doraemon.html"
+              ><img src="./images/phimle/doraemon.jpg"
+            /></a>
             <h4>
               Doraemon Movie 44: Nobita Và Cuộc Phiêu Lưu Vào Thế Giới Trong
               Tranh
@@ -711,7 +652,7 @@
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/doraemon.jpg" />
+            <img class="hover-bg" src="./images/phimle/doraemon-2.jpg" />
 
             <div class="hover-content">
               <h3>
@@ -721,11 +662,9 @@
               <p class="sub">Doraemon the Movie: Nobita's Art World Tales</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-doraemon.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-doraemon.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -742,7 +681,9 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/chuyentau.jpg" />
+            <a href="cp-chuyentau.html"
+              ><img src="./images/phimle/chuyentau.jpg"
+            /></a>
             <h4>Chuyến Tàu Viên Đạn Kinh Hoàng</h4>
             <span class="movie-info1">Bullet Train ExplosionS</span>
           </div>
@@ -755,11 +696,9 @@
               <p class="sub">Bullet Train ExplosionS</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-chuyentau.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-chuyentau.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -776,24 +715,22 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/madea.png" />
+            <a href="cp-madea.html"><img src="./images/phimle/madea.png" /></a>
             <h4>Madea: Lễ Cưới Khó Quên</h4>
             <span class="movie-info1">Madea's Destination Wedding</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/madea.png" />
+            <img class="hover-bg" src="./images/phimle/madea-2.jpg" />
 
             <div class="hover-content">
               <h3>Madea: Lễ Cưới Khó Quên</h3>
               <p class="sub">Madea's Destination Wedding</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-madea.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-madea.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -810,24 +747,24 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/fantastic.jpg" />
+            <a href="cp-fantastic.html"
+              ><img src="./images/phimle/fantastic.jpg"
+            /></a>
             <h4>Bộ Tứ Siêu Đẳng: Bước Đi Đầu Tiên</h4>
             <span class="movie-info1">The Fantastic Four: First Steps</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/fantastic.jpg" />
+            <img class="hover-bg" src="./images/phimle/fantastic-2.jpg" />
 
             <div class="hover-content">
               <h3>Bộ Tứ Siêu Đẳng: Bước Đi Đầu Tiên</h3>
               <p class="sub">The Fantastic Four: First Steps</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-fantastic.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-fantastic.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -844,7 +781,9 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/karate.jpg" />
+            <a href="cp-karate.html"
+              ><img src="./images/phimle/karate.jpg"
+            /></a>
             <h4>Siêu Nhí Karate: Những Huyền Thoại</h4>
             <span class="movie-info1">Karate Kid: Legends</span>
           </div>
@@ -857,11 +796,9 @@
               <p class="sub">Karate Kid: Legends</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-karate.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-karate.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -878,24 +815,22 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/chuhe.jpg" />
+            <a href="cp-chuhe.html"><img src="./images/phimle/chuhe.jpg" /></a>
             <h4>Chú Hề Trong Cánh Đồng Ngô</h4>
             <span class="movie-info1">Clown in a Cornfield</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/chuhe.jpg" />
+            <img class="hover-bg" src="./images/phimle/chuhe-2.jpg" />
 
             <div class="hover-content">
               <h3>Chú Hề Trong Cánh Đồng Ngô</h3>
               <p class="sub">Clown in a Cornfield</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-chuhe.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-chuhe.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -912,7 +847,9 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/mononoke.jpg" />
+            <a href="cp-mononoke.html"
+              ><img src="./images/phimle/mononoke.jpg"
+            /></a>
             <h4>Mononoke Phim Điện Ảnh - Chương II: Tro Tàn Cuồng Nộ</h4>
             <span class="movie-info1"
               >Mononoke the Movie: Chapter II - The Ashes of Rage</span
@@ -920,7 +857,7 @@
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/mononoke.jpg" />
+            <img class="hover-bg" src="./images/phimle/mononoke-2.jpg" />
 
             <div class="hover-content">
               <h3>Mononoke Phim Điện Ảnh - Chương II: Tro Tàn Cuồng Nộ</h3>
@@ -929,11 +866,9 @@
               </p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-mononoke.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-mononoke.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -950,24 +885,24 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/trutaky.jpg" />
+            <a href="cp-trutaky.html"
+              ><img src="./images/phimle/trutaky.jpg"
+            /></a>
             <h4>Trừ Tà Ký: Khởi Nguyên Hắc Ám</h4>
             <span class="movie-info1">Exorcism Chronicles: The Beginning</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/trutaky.jpg" />
+            <img class="hover-bg" src="./images/phimle/trutaky-2.jpg" />
 
             <div class="hover-content">
               <h3>Trừ Tà Ký: Khởi Nguyên Hắc Ám</h3>
               <p class="sub">Exorcism Chronicles: The Beginning</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-trutaky.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-trutaky.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -984,7 +919,9 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/longtracan.jpg" />
+            <a href="cp-longtracan.html"
+              ><img src="./images/phimle/longtracan.jpg"
+            /></a>
             <h4>Lòng Trắc Ẩn</h4>
             <span class="movie-info1">Forgive Us All</span>
           </div>
@@ -997,11 +934,9 @@
               <p class="sub">Forgive Us All</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-longtracan.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-longtracan.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -1018,7 +953,9 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/doisanquy.jpg" />
+            <a href="cp-doisanquy.html"
+              ><img src="./images/phimle/doisanquy.jpg"
+            /></a>
             <h4>Đêm Thánh: Đội Săn Quỷ</h4>
             <span class="movie-info1">Holy Night: Demon Hunters</span>
           </div>
@@ -1031,11 +968,9 @@
               <p class="sub">Holy Night: Demon Hunters</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-doisanquy.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-doisanquy.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -1052,24 +987,24 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/vithan.jpg" />
+            <a href="cp-vithan.html"
+              ><img src="./images/phimle/vithan.jpg"
+            /></a>
             <h4>Đứa Con Của Tháng Các Vị Thần</h4>
             <span class="movie-info1">Child of Kamiari Month</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/vithan.jpg" />
+            <img class="hover-bg" src="./images/phimle/vithan-2.jpg" />
 
             <div class="hover-content">
               <h3>Đứa Con Của Tháng Các Vị Thần</h3>
               <p class="sub">Child of Kamiari Month</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-vithan.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-vithan.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -1086,24 +1021,22 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/havoc.jpg" />
+            <a href="cp-havoc.html"><img src="./images/phimle/havoc.jpg" /></a>
             <h4>Havoc: Tàn Phá</h4>
             <span class="movie-info1">Havoc</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/havoc.jpg" />
+            <img class="hover-bg" src="./images/phimle/havoc-2.jpg" />
 
             <div class="hover-content">
               <h3>Havoc: Tàn Phá</h3>
               <p class="sub">Havoc</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-havoc.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-havoc.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -1120,26 +1053,24 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/ketoan2.jpg" />
+            <a href="cp-ketoan2.html"
+              ><img src="./images/phimle/ketoan2.jpg"
+            /></a>
             <h4>Mật Danh: Kế Toán 2</h4>
             <span class="movie-info1">The Accountant 2</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/ketoan2.jpg" />
+            <img class="hover-bg" src="./images/phimle/ketoan2-2.jpg" />
 
             <div class="hover-content">
               <h3>Mật Danh: Kế Toán 2</h3>
               <p class="sub">The Accountant 2</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-ketoan2.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"
-                  ><a href="#"><button class="btn">ⓘ Chi tiết</button></a></a
-                >
+                <a href="cp-ketoan2.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -1156,7 +1087,9 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/dauxuoi.jpg" />
+            <a href="cp-lobby.html"
+              ><img src="./images/phimle/dauxuoi.jpg"
+            /></a>
             <h4>Đầu Xuôi Đuôi Đút Lót</h4>
             <span class="movie-info1">Lobby</span>
           </div>
@@ -1169,11 +1102,9 @@
               <p class="sub">Lobby</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-lobby.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-lobby.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -1190,7 +1121,7 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/ochi.jpg" />
+            <a href="cp-ochi.html"><img src="./images/phimle/ochi.jpg" /></a>
             <h4>Truyền Thuyết Ochi</h4>
             <span class="movie-info1">The Legend of Ochi</span>
           </div>
@@ -1203,11 +1134,9 @@
               <p class="sub">The Legend of Ochi</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-ochi.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-ochi.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -1224,24 +1153,24 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/sinners.jpg" />
+            <a href="cp-sinner.html"
+              ><img src="./images/phimle/sinners.jpg"
+            /></a>
             <h4>Tội đồ</h4>
             <span class="movie-info1">Sinners</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/sinners.jpg" />
+            <img class="hover-bg" src="./images/phimle/sinners-2.jpg" />
 
             <div class="hover-content">
               <h3>Tội đồ</h3>
               <p class="sub">Sinners</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-sinner.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-sinner.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -1258,24 +1187,26 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/nangbachtuyet.jpg" />
+            <a href="cp-nangbachtuyet.html"
+              ><img src="./images/phimle/nangbachtuyet.jpg"
+            /></a>
             <h4>Nàng Bạch Tuyết</h4>
-            <span class="movie-info1">Snow White </span>
+            <span class="movie-info1">Snow White</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/nangbachtuyet.jpg" />
+            <img class="hover-bg" src="./images/phimle/nangbachtuyet-2.jpg" />
 
             <div class="hover-content">
               <h3>Nàng Bạch Tuyết</h3>
               <p class="sub">Snow White</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
+                <a href="xp-nangbachtuyet.html" class="btn yellow"
+                  >▶ Xem ngay</a
                 >
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-nangbachtuyet.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -1292,24 +1223,24 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/plankton.jpg" />
+            <a href="cp-plankton.html"
+              ><img src="./images/phimle/plankton.jpg"
+            /></a>
             <h4>Plankton: Bản Điện Ảnh</h4>
             <span class="movie-info1">Plankton: The Movie</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/plankton.jpg" />
+            <img class="hover-bg" src="./images/phimle/plankton-2.jpg" />
 
             <div class="hover-content">
               <h3>Plankton: Bản Điện Ảnh</h3>
               <p class="sub">Plankton: The Movie</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-plankton.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-plankton.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
@@ -1326,24 +1257,22 @@
 
         <div class="movie-item">
           <div class="movie-img">
-            <img src="./images/phimle/bee.jpg" />
+            <a href="cp-bee.html"><img src="./images/phimle/bee.jpg" /></a>
             <h4>Ong Nhí Phiêu Lưu Ký: Giải Cứu Công Chúa Kiến</h4>
             <span class="movie-info1">Maya the Bee: The Golden Orb</span>
           </div>
 
           <div class="movie-hover">
-            <img class="hover-bg" src="./images/phimle/bee.jpg" />
+            <img class="hover-bg" src="./images/phimle/bee-2.jpg" />
 
             <div class="hover-content">
               <h3>Ong Nhí Phiêu Lưu Ký: Giải Cứu Công Chúa Kiến</h3>
               <p class="sub">Maya the Bee: The Golden Orb</p>
 
               <div class="action-btns">
-                <a href="#" style="text-decoration: none"
-                  ><button class="btn yellow"><p>▶ Xem ngay</p></button></a
-                >
+                <a href="xp-bee.html" class="btn yellow">▶ Xem ngay</a>
                 <button class="btn">♡ Thích</button>
-                <a href="#"><button class="btn">ⓘ Chi tiết</button></a>
+                <a href="cp-bee.html" class="btn">ⓘ Chi tiết</a>
               </div>
 
               <div class="tags">
