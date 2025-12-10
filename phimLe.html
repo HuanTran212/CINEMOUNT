@@ -77,32 +77,6 @@
       </script>
     </header>
 
-    <section class="hero" style="filter: brightness(1.8)">
-      <video
-        class="hero-video"
-        src="./video/./thanhguomdietquy.mp4"
-        muted
-        loop
-        autoplay
-        playsinline
-      ></video>
-
-      <div class="overlay-2"></div>
-
-      <script>
-        const videoss = document.querySelectorAll(".hero video");
-        videoss.forEach((video) => {
-          video.muted = true;
-          video.autoplay = true;
-          video.loop = true;
-          video.play().catch(() => {
-            console.log("Autoplay bị chặn, thử lại...");
-            setTimeout(() => video.play(), 500);
-          });
-        });
-      </script>
-    </section>
-
     <section class="section" style="padding: 0 70px">
       <div class="section-header">
         <h3>Phim Lẻ</h3>
