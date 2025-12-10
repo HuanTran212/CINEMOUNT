@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img
+          src="images/logo.png"
+          alt="Movies Bazer"
+          style="
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+          "
+        />
+        <a style="text-decoration: none; color: white" href="home.html"
+          ><span>CINEMOUNT</span></a
+        >
+      </div>
+
+      <nav class="nav">
+        <a href="home.html" class="active">Trang Chủ</a>
+        <a href="phimLe.html">Phim Lẻ</a>
+        <a href="phimbo.html">Phim Bộ</a>
+        <a href="lienhe.html">Liên hệ</a>
+      </nav>
+    </header>
+    <header class="header">
+      <div class="logo">
+        <img
+          src="images/logo.png"
+          alt="Movies Bazer"
+          style="
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+          "
+        />
+        <a style="text-decoration: none; color: white" href="home.html">
+          <span>CINEMOUNT</span>
+        </a>
+      </div>
+
+      <!-- Nút mobile -->
+      <div class="menu-btn" id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- NAV -->
+      <nav class="nav" id="nav">
+        <a href="home.html" class="active">Trang Chủ</a>
+        <a href="phimLe.html">Phim Lẻ</a>
+        <a href="phimbo.html">Phim Bộ</a>
+        <a href="lienhe.html">Liên hệ</a>
+      </nav>
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const nav = document.getElementById("nav");
+
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          nav.classList.toggle("active");
+        });
+      </script>
+    </header>
+
+    <main id="movie-main">
+      <div class="player-header"></div>
+
+      <div class="player-container">
+        <iframe
+          class="youtube-video"
+          src="https://www.youtube.com/embed/5gYyveM2FV4?autoplay=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        >
+        </iframe>
+        <div class="player-overlay">
+          <div class="player-back">
+            <a href="home.html">
+              <i class="fa-solid fa-chevron-left"></i> Quay lại</a
+            >
+          </div>
+
+          <div class="player-center"></div>
+
+          <div class="player-controls">
+            <div class="left-controls">
+              <button>♥ Yêu thích</button>
+              <button>+ Thêm vào</button>
+            </div>
+            <div class="right-controls">
+              <button>Chia sẻ</button>
+              <button>Báo lỗi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="content-wrapper">
+          <aside class="sidebar">
+            <img src="images/phimle/mononoke.jpg" />
+
+            <h3>Mononoke Phim Điện Ảnh - Chương II: Tro Tàn Cuồng Nộ</h3>
+
+            <div class="movie-info">
+              <ul class="info-list">
+                <li id="IMDb">IMDb 7.8</li>
+                <li id="age-rating">T16</li>
+                <li>2023</li>
+                <li>2h 30m</li>
+              </ul>
+            </div>
+
+            <div class="genre-section">
+              <ul class="genre-list">
+                <li><a href="#">Hành Động</a></li>
+                <li><a href="#">Viễn Tưởng</a></li>
+                <li><a href="#">Kịch Tính</a></li>
+                <li><a href="#">Phiêu Lưu</a></li>
+                <li><a href="#">Hài</a></li>
+              </ul>
+            </div>
+          </aside>
+
+          <section class="movie-details">
+            <div class="tabs-navigation">
+              <a href="#" class="active">Giới thiệu</a>
+              <a href="#">Tập phim</a>
+              <a href="#">Diễn viên</a>
+              <a href="#">Đề xuất</a>
+            </div>
+
+            <h3>Tóm tắt</h3>
+            <p>
+              Sau phần một và phần hai tập chung vào nhân vật Peter Quill, hay
+              còn gọi là Star-Lord, thật bất ngờ khi đạo diễn James Gunn lại
+              quyết định hướng câu chuyện của phần 3 cho nhân vật Rocket. Cụ
+              thể, Rocket bị tấn công và gặp thương tích nặng nề. Cách duy nhất
+              để chữa trị cho cậu là tìm được người đã tạo ra cậu ấy ngay từ ban
+              đầu, một kẻ có tên là High Evolutionary
+            </p>
+
+            <div class="cast-list">
+              <h4>Đạo diễn:</h4>
+              <p>James Gunn</p>
+              <h4>Diễn viên chính:</h4>
+              <p>
+                Chris Pratt, Dave Bautista, Zoe Saldaña, Karen Gillan, Vin
+                Diesel, Pom Klementieff, Bradley Cooper, Chukwudi Iwuji, Sean
+                Gunn, Will Poulter, Maria Bakalova, Elizabeth Debicki, Sylvester
+                Stallone
+              </p>
+            </div>
+
+            <div class="comment-section">
+              <h3>Bình luận</h3>
+              <textarea
+                placeholder="Vui lòng đăng nhập để bình luận..."
+              ></textarea>
+              <button disabled>Gửi</button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="weekly-bar-section">
+        <h3>🔥 Top Phim Tuần Này</h3>
+        <div class="marquee-container">
+          <div class="weekly-track">
+            <div class="weekly-card">
+              <div class="rank-number rank-1">1</div>
+              <div class="card-img-holder">
+                <img src="images/vohanthanh.jpg" alt="Top 1" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Thanh Gươm Diệt Quỷ: Vô hạn thành</h4>
+                <p>2.5M views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-2">2</div>
+              <div class="card-img-holder">
+                <img src="images/spiderman.jpg" alt="Top 2" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Spider-Man: No Way Home</h4>
+                <p>1.8M views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-3">3</div>
+              <div class="card-img-holder">
+                <img src="images/moana2.jpg" alt="Top 3" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Moana 2</h4>
+                <p>1.2M views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-4">4</div>
+              <div class="card-img-holder">
+                <img src="images/zootopia2.jpg" alt="Top 4" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Zootopia 2</h4>
+                <p>1.0M views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-5">5</div>
+              <div class="card-img-holder">
+                <img src="images/avarta3.jpg" alt="Top 5" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Avatar 3</h4>
+                <p>950K views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-6">6</div>
+              <div class="card-img-holder">
+                <img src="images/coco.jpg" alt="Top 6" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>COCO</h4>
+                <p>900K views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-7">7</div>
+              <div class="card-img-holder">
+                <img src="images/dragon.jpg" alt="Top 7" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Bí Kíp Luyện Rồng</h4>
+                <p>890K views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-others">8</div>
+              <div class="card-img-holder">
+                <img src="images/chuot.jpg" alt="Top 8" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Chú Chuột Đầu Bếp</h4>
+                <p>850K views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-others">9</div>
+              <div class="card-img-holder">
+                <img src="images/xusocacnguyento.jpg" alt="Top 9" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Xứ Sở Các Nguyên Tố</h4>
+                <p>820K views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-others">10</div>
+              <div class="card-img-holder">
+                <img src="images/onepieceLiveAction.jpg" alt="Top 10" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>One Piece: Live Action</h4>
+                <p>800K views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section>
+      <div class="comment_2">
+        <h3>💬 Comment</h3>
+
+        <div class="comment-list">
+          <div class="comment-item">
+            <img
+              src="./images/thanhhuy.jpg"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Thanh Huy Ng</h5>
+              <p>Phim hay lắm mọi người ơi</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <img
+              src="./images/ronaldo.jfif"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Cristiano Ronaldo</h5>
+              <p>Một đời liêm khiết chống lại fifa</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <img
+              src="./images/messi.jfif"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Lionel Messi</h5>
+              <p>Tôi được cha fifa chống lưng, Ronaldo is G.O.A.T</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <img
+              src="./images/BinhGold.jfif"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Bình Gold</h5>
+              <p>Đi tù vui lắm, không phải lo cơm nước nợ nần</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <img
+              src="./images/gh.jpg"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Cao Nguyễn Gia Huy</h5>
+              <p>FB88, chơi thả ga không sợ lỗ</p>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <img
+              src="./images/td.jfif"
+              alt="faceid"
+              class="avatar"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <h5>Trần Dần</h5>
+              <p>Thằng nào chửi tục tao bắn ch*t m*</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        const list = document.querySelector(".comment-list");
+        const items = document.querySelectorAll(".comment-item");
+
+        function slide() {
+          const itemWidth = items[0].offsetWidth + 20; // width + gap
+
+          // trượt sang trái 1 item
+          list.style.transition = "transform 0.5s ease";
+          list.style.transform = `translateX(-${itemWidth}px)`;
+
+          // khi trượt xong → đẩy item đầu xuống cuối → reset translate
+          setTimeout(() => {
+            list.appendChild(list.firstElementChild);
+            list.style.transition = "none";
+            list.style.transform = "translateX(0)";
+          }, 500);
+        }
+
+        setInterval(slide, 3000); // chạy mỗi 3s
+      </script>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="./images/logo.png" alt="Cinemount Logo" />
+          <div>
+            <h2>CINEMOUNT</h2>
+            <p>Trang phim được dựng bởi 5 thằng ngu</p>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <span>➡️</span>
+          <span>🎮</span>
+          <span>💬</span>
+          <span>❌</span>
+          <span>📘</span>
+          <span>🎵</span>
+          <span>📺</span>
+          <span>📸</span>
+          <span>🖼️</span>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Hỏi-Đáp</a>
+        <a href="#">Chính sách bảo mật</a>
+        <a href="#">Điều khoản sử dụng</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Liên hệ</a>
+      </div>
+
+      <div class="footer-tags">
+        <a href="#">Dongphim</a>
+        <a href="#">Ghenphim</a>
+        <a href="#">Motphim</a>
+        <a href="#">Subnhanh</a>
+      </div>
+
+      <p class="footer-desc">
+        Cinemount – Trang xem phim online chất lượng cao miễn phí Vietsub,
+        thuyết minh, lồng tiếng full HD. Kho phim mới cập nhật liên tục với
+        nhiều thể loại...
+      </p>
+
+      <p class="footer-copy">© 2024 Cinemount</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
