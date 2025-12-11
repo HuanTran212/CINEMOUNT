@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
+    <!-- <link rel="stylesheet" href="./fonts/fontawesome-free-7.1.0-web/css/all.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -30,6 +35,7 @@
         <a href="lienhe.html">Liên hệ</a>
       </nav>
     </header>
+
     <header class="header">
       <div class="logo">
         <img
@@ -73,48 +79,22 @@
     </header>
 
     <main id="movie-main">
-      <div class="player-header"></div>
-
-      <div class="player-container">
-        <iframe
-          class="youtube-video"
-          src="https://www.youtube.com/embed/uT2O3y_3vvA?autoplay=1"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        >
-        </iframe>
-        <div class="player-overlay">
-          <div class="player-back">
-            <a href="home.html">
-              <i class="fa-solid fa-chevron-left"></i> Quay lại</a
-            >
-          </div>
-
-          <div class="player-center"></div>
-
-          <div class="player-controls">
-            <div class="left-controls">
-              <button>♥ Yêu thích</button>
-              <button>+ Thêm vào</button>
-            </div>
-            <div class="right-controls">
-              <button>Chia sẻ</button>
-              <button>Báo lỗi</button>
-            </div>
-          </div>
-        </div>
+      <div class="player-placeholder">
+        <img src="images/avarta2.jpg" />
       </div>
 
       <div class="container">
         <div class="content-wrapper">
           <aside class="sidebar">
-            <img src="images/phimle/alexander.jpg" />
+            <img src="images/avarta2.jpg" />
+            <!-- <h3>Top phim tuần này</h3> -->
+            <!-- <ul class="related-list">
+                        <li><a href="#">Phim Liên Quan 1</a></li>
+                        <li><a href="#">Phim Liên Quan 2</a></li>
+                        <li><a href="#">Phim Liên Quan 3</a></li>
+                    </ul> -->
 
-            <h3>
-              Alexander và Chuyến Đi Kinh Khủng, Tồi Tệ, Bàng Hoàng Hoảng Hốt
-            </h3>
+            <h3>Avatar 2: Dòng Chảy Của Nước</h3>
 
             <div class="movie-info">
               <ul class="info-list">
@@ -134,9 +114,43 @@
                 <li><a href="#">Hài</a></li>
               </ul>
             </div>
+
+            <!-- <h3>Có thể bạn sẽ thích</h3>
+                    <ul class="related-list">
+                         <li><a href="#">Phim Đề Xuất A</a></li>
+                        <li><a href="#">Phim Đề Xuất B</a></li>
+                    </ul> -->
           </aside>
 
           <section class="movie-details">
+            <div class="control-bar">
+              <div class="control-bar-1">
+                <a href="xp-avarta3.html">
+                  <div><i class="fa-solid fa-play"></i></div>
+                  <p>Xem Ngay</p>
+                </a>
+              </div>
+
+              <div class="control-bar-2">
+                <a class="item-like" href="">
+                  <div><i class="fa-solid fa-heart"></i></div>
+                  <p>Yêu Thích</p>
+                </a>
+                <a class="item-playlist" href="">
+                  <div><i class="fa-solid fa-plus"></i></div>
+                  <p>Thêm Vào</p>
+                </a>
+                <a class="item-share" href="">
+                  <div><i class="fa-solid fa-share"></i></div>
+                  <p>Chia Sẽ</p>
+                </a>
+                <a class="item-comment" href="">
+                  <div><i class="fa-solid fa-comment"></i></div>
+                  <p>Bình Luận</p>
+                </a>
+              </div>
+            </div>
+
             <div class="tabs-navigation">
               <a href="#" class="active">Giới thiệu</a>
               <a href="#">Tập phim</a>
@@ -178,127 +192,126 @@
       </div>
       <div class="weekly-bar-section">
         <h3>🔥 Top Phim Tuần Này</h3>
-    
+
         <div class="marquee-container">
-            <div class="weekly-track">
-                
-                <div class="weekly-card">
-                    <div class="rank-number rank-1">1</div>
-                    <div class="card-img-holder">
-                        <img src="images/vohanthanh.jpg" alt="Top 1">
-                        <a href="xp-demon.html"><div class="play-hover">▶</div></a>
-                    </div>
-                    <div class="card-info">
-                        <h4>Thanh Gươm Diệt Quỷ: Vô hạn thành</h4>
-                        <p>2.5M views</p>
-                    </div>
-                </div>
-    
-                <div class="weekly-card">
-                    <div class="rank-number rank-2">2</div>
-                    <div class="card-img-holder">
-                        <img src="images/spiderman.jpg" alt="Top 2">
-                        <a href="xp-spiderman.html"><div class="play-hover">▶</div></a>
-                    </div>
-                    <div class="card-info">
-                        <h4>Spider-Man: No Way Home</h4>
-                        <p>1.8M views</p>
-                    </div>
-                </div>
-    
-                <div class="weekly-card">
-                    <div class="rank-number rank-3">3</div>
-                    <div class="card-img-holder">
-                        <img src="images/moana2.jpg" alt="Top 3">
-                        <a href="xp-moana.html"><div class="play-hover">▶</div></a>
-                    </div>
-                    <div class="card-info">
-                        <h4>Moana 2</h4>
-                        <p>1.2M views</p>
-                    </div>
-                </div>
-    
-                <div class="weekly-card">
-                    <div class="rank-number rank-4">4</div>
-                    <div class="card-img-holder">
-                        <img src="images/zootopia2.jpg" alt="Top 4">
-                         <a href="xp-Zootopia.html"><div class="play-hover">▶</div></a>
-                    </div>
-                    <div class="card-info">
-                        <h4>Zootopia 2</h4>
-                        <p>1.0M views</p>
-                    </div>
-                </div>
-    
-                <div class="weekly-card">
-                    <div class="rank-number rank-5">5</div>
-                    <div class="card-img-holder">
-                        <img src="images/avarta3.jpg" alt="Top 5">
-                         <a href="xp-avarta3.html"><div class="play-hover">▶</div></a>
-                    </div>
-                    <div class="card-info">
-                        <h4>Avatar 3</h4>
-                        <p>950K views</p>
-                    </div>
-                </div>
-    
-                <div class="weekly-card">
-                    <div class="rank-number rank-6">6</div>
-                    <div class="card-img-holder">
-                        <img src="images/coco.jpg" alt="Top 6">
-                        <a href="xp-coco.html"><div class="play-hover">▶</div></a>
-                    </div>
-                    <div class="card-info">
-                        <h4>COCO</h4>
-                        <p>900K views</p>
-                    </div>
-                </div>
-    
-                <div class="weekly-card">
-                    <div class="rank-number rank-7">7</div>
-                    <div class="card-img-holder">
-                        <img src="images/dragon.jpg" alt="Top 7">
-                        <a href="xp-bikipluyenrong.html"><div class="play-hover">▶</div></a>
-                    </div>
-                    <div class="card-info">
-                        <h4>Bí Kíp Luyện Rồng</h4>
-                        <p>890K views</p>
-                    </div>
-                </div>
-    
-                <div class="weekly-card">
-                    <div class="rank-number rank-others">8</div>
-                    <div class="card-img-holder">
-                        <img src="images/chuot.jpg" alt="Top 8"> 
-                        <a href="xp-chuotdaubep.html"><div class="play-hover">▶</div></a>
-                    </div>
-                    <div class="card-info">
-                        <h4>Chú Chuột Đầu Bếp</h4>
-                        <p>850K views</p>
-                    </div>
-                </div>
-    
-                <div class="weekly-card">
-                    <div class="rank-number rank-others">9</div>
-                    <div class="card-img-holder">
-                        <img src="images/xusocacnguyento.jpg" alt="Top 9">
-                        <a href="xp-xscnt.html"><div class="play-hover">▶</div></a>
-                    </div>
-                    <div class="card-info">
-                        <h4>Xứ Sở Các Nguyên Tố</h4>
-                        <p>820K views</p>
-                    </div>
-                </div>
-    
-                <div class="weekly-card">
-                    <div class="rank-number rank-others">10</div>
-                    <div class="card-img-holder">
-                        <img src="images/onepieceLiveAction.jpg" alt="Top 10">
-                        <a href="xp-onepiece.html"><div class="play-hover">▶</div></a>
-                    </div>
-                    <div class="card-info">
-                        <h4>One Piece: Live Action</h4>
-                        <p>800K views</p>
+          <div class="weekly-track">
+            <div class="weekly-card">
+              <div class="rank-number rank-1">1</div>
+              <div class="card-img-holder">
+                <img src="images/vohanthanh.jpg" alt="Top 1" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Thanh Gươm Diệt Quỷ: Vô hạn thành</h4>
+                <p>2.5M views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-2">2</div>
+              <div class="card-img-holder">
+                <img src="images/spiderman.jpg" alt="Top 2" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Spider-Man: No Way Home</h4>
+                <p>1.8M views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-3">3</div>
+              <div class="card-img-holder">
+                <img src="images/moana2.jpg" alt="Top 3" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Moana 2</h4>
+                <p>1.2M views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-4">4</div>
+              <div class="card-img-holder">
+                <img src="images/zootopia2.jpg" alt="Top 4" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Zootopia 2</h4>
+                <p>1.0M views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-5">5</div>
+              <div class="card-img-holder">
+                <img src="images/avarta3.jpg" alt="Top 5" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Avatar 3</h4>
+                <p>950K views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-6">6</div>
+              <div class="card-img-holder">
+                <img src="images/coco.jpg" alt="Top 6" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>COCO</h4>
+                <p>900K views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-7">7</div>
+              <div class="card-img-holder">
+                <img src="images/dragon.jpg" alt="Top 7" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Bí Kíp Luyện Rồng</h4>
+                <p>890K views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-others">8</div>
+              <div class="card-img-holder">
+                <img src="images/chuot.jpg" alt="Top 8" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Chú Chuột Đầu Bếp</h4>
+                <p>850K views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-others">9</div>
+              <div class="card-img-holder">
+                <img src="images/xusocacnguyento.jpg" alt="Top 9" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>Xứ Sở Các Nguyên Tố</h4>
+                <p>820K views</p>
+              </div>
+            </div>
+
+            <div class="weekly-card">
+              <div class="rank-number rank-others">10</div>
+              <div class="card-img-holder">
+                <img src="images/onepieceLiveAction.jpg" alt="Top 10" />
+                <div class="play-hover">▶</div>
+              </div>
+              <div class="card-info">
+                <h4>One Piece: Live Action</h4>
+                <p>800K views</p>
               </div>
             </div>
           </div>
